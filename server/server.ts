@@ -11,5 +11,5 @@ const proxy = createProxyMiddleware({
   logLevel: 'debug',
 });
 
-app.post('/graphql', cache('5 minutes'), proxy);
+app.post('/graphql', cache(100), proxy);
 app.listen(3001);

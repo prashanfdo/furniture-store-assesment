@@ -7,14 +7,17 @@ import "./index.css";
 import router from "./pages/router";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./theme";
+import { CartContextProvider } from "contexts/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
     <ApolloClientProvider>
-      <ThemeProvider theme={theme}>
-        <RouterProvider router={router} />
-      </ThemeProvider>
+      <CartContextProvider>
+        <ThemeProvider theme={theme}>
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </CartContextProvider>
     </ApolloClientProvider>
   </React.StrictMode>
 );

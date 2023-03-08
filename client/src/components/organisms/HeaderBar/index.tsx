@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React from "react";
+import SearchBar from "components/organisms/SearchBar";
 
 const Header = styled.header`
   position: sticky;
@@ -13,7 +13,8 @@ const ImgLogo = styled.img`
   height: 100%;
 `;
 const DivSearchContainer = styled.div`
-  text-align: center;
+  display: grid;
+  place-items: center;
 `;
 
 export default function HeaderBar() {
@@ -22,7 +23,7 @@ export default function HeaderBar() {
       <Header>
         <ImgLogo src="/home24_logo.svg" alt="" />
         <DivSearchContainer>
-          <div>search</div>
+          <SearchBar />
         </DivSearchContainer>
       </Header>
     </>
