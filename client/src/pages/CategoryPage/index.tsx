@@ -9,7 +9,7 @@ export default function CategoryPage() {
 
   return (
     <>
-      <ProductList searchText="asd" page={1} />
+      <ProductList categoryId={categoryId} />
     </>
   );
 }

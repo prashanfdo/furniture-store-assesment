@@ -1,5 +1,6 @@
 import constate from "constate";
 import { useQuery, gql } from "@apollo/client";
+import { Article } from "types";
 type GetProductListResponse = {
   categories: [
     {
@@ -14,21 +15,7 @@ type GetProductListResponse = {
         ];
       };
       categoryArticles: {
-        articles: [
-          {
-            name: string;
-            variantName: string;
-            prices: {
-              currency: string;
-              regular: {
-                value: number;
-              };
-            };
-            images: {
-              path: string;
-            }[];
-          }
-        ];
+        articles: Article[];
       };
     }
   ];
@@ -48,14 +35,19 @@ const GET_PRODUCT_LIST = gql`
         articles {
           name
           variantName
+          images(format: WEBP, maxWidth: 200, maxHeight: 200, limit: 4) {
+            path
+            type
+          }
           prices {
             currency
             regular {
               value
             }
-          }
-          images(format: WEBP, maxWidth: 200, maxHeight: 200, limit: 4) {
-            path
+            special {
+              value
+              discount
+            }
           }
         }
       }
@@ -64,13 +56,12 @@ const GET_PRODUCT_LIST = gql`
 `;
 
 type ProductListContextProviderProps = {
-  searchText: string;
-  page: number;
+  categoryId: string;
 };
 const [ProductListContextProvider, useProductListContext] = constate(
-  ({ searchText }: ProductListContextProviderProps) => {
+  ({ categoryId }: ProductListContextProviderProps) => {
     const { loading, error, data } = useQuery<GetProductListResponse>(GET_PRODUCT_LIST, {
-      variables: { id: "156126" },
+      variables: { id: categoryId },
     });
     console.log(data?.categories);
     return {

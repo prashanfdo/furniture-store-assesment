@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import { ChildCategory } from "types";
 
 type Category = ChildCategory["list"][0];
@@ -22,7 +23,7 @@ const UlContainer = styled.ul`
 type LinkCategoryProps = {
   isActive?: boolean;
 };
-const LinkCategory = styled.a<LinkCategoryProps>`
+const LinkCategory = styled(Link)<LinkCategoryProps>`
   text-decoration: none;
   padding: 0.5em 1.5em;
   display: block;
@@ -46,7 +47,7 @@ export default function CategoryList({ categories, selectedCategoryId }: Categor
       <H2Title>Categories</H2Title>
       <UlContainer>
         <li>
-          <LinkCategory isActive={!selectedCategoryId?.trim()} href={"/"}>
+          <LinkCategory isActive={!selectedCategoryId?.trim()} to={"/"}>
             All
           </LinkCategory>
         </li>
@@ -54,7 +55,7 @@ export default function CategoryList({ categories, selectedCategoryId }: Categor
           <li key={category.urlPath}>
             <LinkCategory
               isActive={category.id === selectedCategoryId?.trim()}
-              href={`/${category.id}`}>
+              to={`/${category.id}`}>
               {category.name}
             </LinkCategory>
           </li>

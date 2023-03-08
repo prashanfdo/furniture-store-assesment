@@ -1,7 +1,7 @@
+import { gql, useQuery } from "@apollo/client";
 import constate from "constate";
-import { useQuery, gql } from "@apollo/client";
-import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 type GetSearchSuggestionsResponse = {
   searchSuggestions: {
@@ -21,8 +21,9 @@ const GET_SEARCH_SUGGESTIONS = gql`
 `;
 
 const [SearchBarContextProvider, useSearchBarContext] = constate(() => {
+  const navigate = useNavigate();
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
-  let [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const initialSearchText = searchParams.get("q") || "";
 
   const [searchText, setSearchText] = useState<string>("");
@@ -30,9 +31,9 @@ const [SearchBarContextProvider, useSearchBarContext] = constate(() => {
   const handleSearchSubmit = (searchText: string) => {
     setShowSuggestions(false);
     if (!!searchText?.trim()) {
-      setSearchParams({ q: searchText?.trim() });
+      navigate(`/search?q=${encodeURIComponent(searchText?.trim())}`);
     } else {
-      setSearchParams({});
+      navigate(`/`);
     }
   };
 

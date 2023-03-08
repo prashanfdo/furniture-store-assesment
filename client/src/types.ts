@@ -8,8 +8,20 @@ export type Category = {
 export type Article = {
   name: string;
   variantName: string;
-  prices: Prices;
-  images: Image[];
+  images: {
+    path: string;
+    type: string;
+  }[];
+  prices: {
+    currency: string;
+    regular: {
+      value: number;
+    };
+    special: {
+      value: number;
+      discount: number;
+    };
+  };
 };
 
 export type ChildCategory = {
