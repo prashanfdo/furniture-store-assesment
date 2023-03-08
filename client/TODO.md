@@ -30,6 +30,7 @@
 - Cookie based cart
 - Asscebility
 - Atomic design
+- API error handling, Sentry
 
 - Demonstrate
     - Hooks

@@ -12,6 +12,9 @@ const Header = styled.header`
 const ImgLogo = styled.img`
   height: 100%;
 `;
+const LinkLogo = styled.a`
+  display: block;
+`;
 const DivSearchContainer = styled.div`
   display: grid;
   place-items: center;
@@ -21,7 +24,9 @@ export default function HeaderBar() {
   return (
     <>
       <Header>
-        <ImgLogo src="/home24_logo.svg" alt="" />
+        <LinkLogo href="/">
+          <ImgLogo src="/home24_logo.svg" alt="" />
+        </LinkLogo>
         <DivSearchContainer>
           <SearchBar />
         </DivSearchContainer>

@@ -7,7 +7,7 @@ import "./index.css";
 import router from "./pages/router";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./theme";
-import { CartContextProvider } from "contexts/CartContext";
+import { CartContextProvider } from "root-contexts/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(

@@ -9,11 +9,13 @@ type useSearchFormProps = {
   initialSearchText: string;
   onSearchSubmit: (searchText: string) => void;
   onSearchChange: (searchText: string) => void;
+  setShowSuggestions: (show: boolean) => void;
 };
 const useSearchForm = ({
   initialSearchText,
   onSearchSubmit,
   onSearchChange,
+  setShowSuggestions,
 }: useSearchFormProps) => {
   const { register, handleSubmit, watch } = useForm<SearchFormFields>({
     defaultValues: {

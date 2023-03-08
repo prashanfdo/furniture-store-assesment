@@ -1,20 +1,18 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-type ComponentProps = {
-  children?: React.ReactNode;
-};
-const wrapContext = (
-  ContextProvider: React.FC<ComponentProps>,
-  WrappedComponent: React.FC<ComponentProps>
+const wrapContext = <
+  TProviderProps extends { children?: ReactNode },
+  TComponentProps extends { children?: ReactNode }
+>(
+  ContextProvider: React.FC<TProviderProps>,
+  WrappedComponent: React.FC<TComponentProps>
 ) => {
-  return class extends React.Component {
-    render() {
-      return (
-        <ContextProvider>
-          <WrappedComponent {...this.props} />
-        </ContextProvider>
-      );
-    }
+  return (props: TProviderProps & TComponentProps) => {
+    return (
+      <ContextProvider {...(props as TProviderProps)}>
+        <WrappedComponent {...(props as TComponentProps)} />
+      </ContextProvider>
+    );
   };
 };
 

@@ -2,7 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy_bak": "http://localhost:3001",
+  "proxy": "https://www.home24.de",
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@emotion/react": "^11.10.6",

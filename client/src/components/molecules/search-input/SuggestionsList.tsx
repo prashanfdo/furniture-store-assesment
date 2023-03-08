@@ -30,23 +30,26 @@ const LinkSuggestion = styled.a`
 
 type SuggestionsListProps = {
   suggestions: {
-    href: string;
-    text: string;
+    name: string;
+    results: number;
+    image: string;
   }[];
+  showSuggestions: boolean;
 };
 
 export const SuggestionsList: React.FC<SuggestionsListProps> = ({
   suggestions,
+  showSuggestions,
 }: SuggestionsListProps) => {
-  if (suggestions.length === 0) {
+  if (!showSuggestions || suggestions.length === 0) {
     return null;
   }
 
   return (
-    <UlSuggestions>
+    <UlSuggestions className="suggestion-list">
       {suggestions.map((suggestion) => (
-        <li key={suggestion.href}>
-          <LinkSuggestion href="">{suggestion.text}</LinkSuggestion>
+        <li key={suggestion.name}>
+          <LinkSuggestion href="#">{suggestion.name}</LinkSuggestion>
         </li>
       ))}
     </UlSuggestions>

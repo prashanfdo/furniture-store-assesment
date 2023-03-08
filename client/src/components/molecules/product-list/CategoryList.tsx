@@ -5,7 +5,7 @@ import { ChildCategory } from "types";
 type Category = ChildCategory["list"][0];
 
 const DivContainer = styled.div`
-  background-color: #f1f1f4;
+  background-color: #fff;
 `;
 const H2Title = styled.h2`
   font-size: 1rem;
@@ -37,16 +37,24 @@ const LinkCategory = styled.a<LinkCategoryProps>`
 `;
 
 type CategoryListProps = {
-  categories: Category[];
+  selectedCategoryId?: string;
+  categories?: Category[];
 };
-export default function CategoryList({ categories }: CategoryListProps) {
+export default function CategoryList({ categories, selectedCategoryId }: CategoryListProps) {
   return (
     <DivContainer>
       <H2Title>Categories</H2Title>
       <UlContainer>
-        {categories.map((category) => (
+        <li>
+          <LinkCategory isActive={!selectedCategoryId?.trim()} href={"/"}>
+            All
+          </LinkCategory>
+        </li>
+        {categories?.map((category) => (
           <li key={category.urlPath}>
-            <LinkCategory isActive={true} href={category.urlPath}>
+            <LinkCategory
+              isActive={category.id === selectedCategoryId?.trim()}
+              href={`/${category.id}`}>
               {category.name}
             </LinkCategory>
           </li>

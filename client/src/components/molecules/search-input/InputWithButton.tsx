@@ -12,12 +12,14 @@ const ButtonSearch = styled.button`
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   color: #333;
+  cursor: pointer;
 `;
 const InputText = styled.input`
   border: none;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  outline: transparent;
 `;
 
 type InputWithButtonProps = {
@@ -27,7 +29,7 @@ type InputWithButtonProps = {
 export const InputWithButton: React.FC<InputWithButtonProps> = ({ register }) => {
   return (
     <>
-      <InputText type="text" {...register("search")} />
+      <InputText type="text" {...register("search")} autoComplete="off" />
       <ButtonSearch>
         <MagnifyingGlassIcon />
       </ButtonSearch>

@@ -62,16 +62,23 @@ const GET_PRODUCT_LIST = gql`
     }
   }
 `;
-const [ProductListContextProvider, useProductListContext] = constate(() => {
-  const { loading, error, data } = useQuery<GetProductListResponse>(GET_PRODUCT_LIST, {
-    variables: { id: "156126" },
-  });
-  console.log(data?.categories);
-  return {
-    loading,
-    error,
-    data: data?.categories?.[0],
-  };
-});
+
+type ProductListContextProviderProps = {
+  searchText: string;
+  page: number;
+};
+const [ProductListContextProvider, useProductListContext] = constate(
+  ({ searchText }: ProductListContextProviderProps) => {
+    const { loading, error, data } = useQuery<GetProductListResponse>(GET_PRODUCT_LIST, {
+      variables: { id: "156126" },
+    });
+    console.log(data?.categories);
+    return {
+      loading,
+      error,
+      data: data?.categories?.[0],
+    };
+  }
+);
 
 export { ProductListContextProvider, useProductListContext };

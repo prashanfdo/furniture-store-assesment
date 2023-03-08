@@ -4,7 +4,7 @@ import React from "react";
 export default function HomePage() {
   return (
     <>
-      <ProductList />
+      <ProductList searchText="asd" page={1} />
     </>
   );
 }
