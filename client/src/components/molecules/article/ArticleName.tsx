@@ -1,15 +1,18 @@
 import styled from "@emotion/styled";
 import { Article } from "types";
 
-const SpanContainer = styled.span`
-  color: #999;
+const DivContainer = styled.div`
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
 
 type ArticleNameProps = {
   product: Article;
 };
 const ArticleName: React.FC<ArticleNameProps> = ({ product }: ArticleNameProps) => {
-  return <SpanContainer>{product.name}</SpanContainer>;
+  return <DivContainer>{product.name}</DivContainer>;
 };
 
 export default ArticleName;

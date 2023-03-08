@@ -5,12 +5,13 @@ import ArticleName from "./ArticleName";
 import ArticleImages from "./ArticleImages";
 
 const LinkContainer = styled.a`
-  display: grid;
+  display: block;
   border: 0;
   border-radius: 10px;
   background-color: #fff;
   overflow: hidden;
   text-decoration: none;
+  padding: 0.5rem;
 `;
 
 type ArticleThumbProps = {
