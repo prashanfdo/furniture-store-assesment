@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "npm test -- --coverage --watchAll ",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --max-warnings 0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
     "eject": "react-scripts eject",
     "prepare": "run-script-os",
@@ -53,6 +53,15 @@
       }
     }
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
+    "*.{ts,tsx,css,scss}": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@emotion/react": "^11.10.6",
@@ -83,6 +92,7 @@
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-jest-dom": "^4.0.3",
     "husky": "^8.0.0",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "run-script-os": "^1.1.6",
     "sass": "^1.58.3",
