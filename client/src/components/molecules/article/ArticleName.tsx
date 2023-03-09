@@ -1,18 +1,14 @@
-import styled from "@emotion/styled";
 import { Article } from "types";
-
-const DivContainer = styled.div`
-  color: #333;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-`;
 
 type ArticleNameProps = {
   product: Article;
 };
 const ArticleName: React.FC<ArticleNameProps> = ({ product }: ArticleNameProps) => {
-  return <DivContainer>{product.name}</DivContainer>;
+  return (
+    <div className="text-gray-900 text-ellipsis whitespace-nowrap overflow-hidden">
+      {product.name}
+    </div>
+  );
 };
 
 export default ArticleName;

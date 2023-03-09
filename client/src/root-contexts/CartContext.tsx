@@ -54,7 +54,7 @@ const GET_PRODUCT_LIST = gql`
               value
             }
           }
-          images(format: WEBP, maxWidth: 200, maxHeight: 200, limit: 4) {
+          images(format: WEBP, maxWidth: 400, maxHeight: 400, limit: 4) {
             path
           }
         }

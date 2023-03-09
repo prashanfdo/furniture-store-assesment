@@ -1,26 +1,4 @@
-import styled from "@emotion/styled";
 import { useMemo } from "react";
-
-const DivContainer = styled.div`
-  color: #333;
-`;
-const SpanOldPrice = styled.span`
-  text-decoration: line-through;
-  font-size: 0.8em;
-  margin-left: 1em;
-`;
-const SpanFinalPrice = styled.span`
-  color: red;
-  font-weight: bold;
-`;
-const SpanDiscount = styled.span`
-  background-color: red;
-  color: #fff;
-  font-size: 0.8em;
-  margin-left: 1em;
-  border-radius: 5px;
-  padding: 0.2em 0.4em;
-`;
 
 type ArticlePriceProps = {
   currency: string;
@@ -42,11 +20,17 @@ const ArticlePrice: React.FC<ArticlePriceProps> = ({
     return [finalPrice, regularPrice, discountPercent];
   }, [salePrice, price, discount, currency]);
   return (
-    <DivContainer>
-      <SpanFinalPrice>{finalPrice}</SpanFinalPrice>
-      {discountPercent > 0 ? <SpanOldPrice>{regularPrice}</SpanOldPrice> : null}
-      {discountPercent > 0 ? <SpanDiscount>-{discountPercent}%</SpanDiscount> : null}
-    </DivContainer>
+    <div className="text-gray-600">
+      <span className="text-red-600 font-semibold">{finalPrice}</span>
+      {discountPercent > 0 ? (
+        <span className="line-through text-sm ml-4">{regularPrice}</span>
+      ) : null}
+      {discountPercent > 0 ? (
+        <span className="bg-red-500 text-sm ml-2 rounded-lg py-1 px-1 text-white">
+          -{discountPercent}%
+        </span>
+      ) : null}
+    </div>
   );
 };
 

@@ -1,29 +1,14 @@
-import styled from "@emotion/styled";
 import { Article } from "types";
-
-const ButtonContainer = styled.button`
-  text-align: center;
-  border: solid 1px #eee;
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  background-color: #fff;
-  color: #666;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background-color: #7047eb;
-    color: #fff;
-  }
-`;
 
 type AddToCartButtonProps = {
   product: Article;
 };
 const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product }: AddToCartButtonProps) => {
-  return <ButtonContainer>Add To Cart</ButtonContainer>;
+  return (
+    <button className="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100">
+      Add To Cart
+    </button>
+  );
 };
 
 export default AddToCartButton;

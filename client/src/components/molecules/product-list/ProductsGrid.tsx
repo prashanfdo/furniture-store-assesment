@@ -1,22 +1,15 @@
-import styled from "@emotion/styled";
-import { Article } from "types";
 import ArticleThumb from "components/molecules/article/ArticleThumb";
-
-const ContainerDiv = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 1rem;
-`;
+import { Article } from "types";
 
 type ProductsGridProps = {
   products: Article[];
 };
 export default function ProductsGrid({ products }: ProductsGridProps) {
   return (
-    <ContainerDiv>
+    <div className="grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-4">
       {products.map((product) => (
         <ArticleThumb key={product.name} product={product} />
       ))}
-    </ContainerDiv>
+    </div>
   );
 }

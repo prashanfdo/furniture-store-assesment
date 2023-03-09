@@ -1,20 +1,3 @@
-import styled from "@emotion/styled";
-import { layout } from "styled-system";
-
-const H1Title = styled.h1`
-  font-size: 1.5rem;
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  align-items: center;
-  ${layout}
-`;
-
-const SpanArticleCount = styled.span`
-  color: #999;
-  margin-left: 0.5rem;
-  font-weight: normal;
-`;
-
 type CategoryListProps = {
   name: string;
   articleCount: number;
@@ -22,9 +5,9 @@ type CategoryListProps = {
 export default function ProductListHeader({ name, articleCount }: CategoryListProps) {
   return (
     <>
-      <H1Title className="m-4">
-        {name} <SpanArticleCount>({articleCount})</SpanArticleCount>
-      </H1Title>
+      <h1 className="text-3xl grid grid-cols-[auto_auto_1fr] align-middle mt-4 mb-6">
+        {name} <span className="text-gray-500 ml-1">({articleCount})</span>
+      </h1>
     </>
   );
 }
