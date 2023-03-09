@@ -17,7 +17,7 @@ export type Article = {
     regular: {
       value: number;
     };
-    special: {
+    special?: {
       value: number;
       discount: number;
     };

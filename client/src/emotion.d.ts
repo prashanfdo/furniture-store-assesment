@@ -7,5 +7,6 @@ declare module "@emotion/react" {
       positive?: string;
       negative?: string;
     };
+    breakpoints: string[];
   }
 }

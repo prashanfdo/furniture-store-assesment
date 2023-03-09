@@ -5,6 +5,7 @@ const theme: Theme = {
     primary: "red",
     positive: "green",
   },
+  breakpoints: ["40em", "52em", "64em", "80em"],
 };
 
 export default theme;

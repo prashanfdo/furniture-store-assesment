@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
+import { layout } from "styled-system";
 
 const H1Title = styled.h1`
   font-size: 1.5rem;
   display: grid;
   grid-template-columns: auto auto 1fr;
   align-items: center;
+  ${layout}
 `;
 
 const SpanArticleCount = styled.span`

@@ -3,6 +3,7 @@ import { Article } from "types";
 import AddToCartButton from "./AddToCartButton";
 import ArticleName from "./ArticleName";
 import ArticleImages from "./ArticleImages";
+import ArticlePrice from "./ArticlePrice";
 
 const LinkContainer = styled.a`
   display: block;
@@ -22,6 +23,12 @@ const ArticleThumb: React.FC<ArticleThumbProps> = ({ product }: ArticleThumbProp
     <LinkContainer href="#product-page">
       <ArticleImages productImages={product.images} />
       <ArticleName product={product} />
+      <ArticlePrice
+        currency={product.prices.currency}
+        price={product.prices.regular.value}
+        salePrice={product.prices.special?.value}
+        discount={product.prices.special?.discount}
+      />
       <AddToCartButton product={product} />
     </LinkContainer>
   );
