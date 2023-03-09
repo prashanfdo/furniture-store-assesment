@@ -1,4 +1,4 @@
-import ProductList from "components/organisms/ProductList";
+import CategoryProductList from "components/organisms/CategoryProductList";
 import { ROOT_CATEGORY_ID } from "helpers/constants";
 import { useMatches } from "react-router-dom";
 
@@ -9,7 +9,7 @@ export default function CategoryPage() {
 
   return (
     <>
-      <ProductList categoryId={categoryId} />
+      <CategoryProductList categoryId={categoryId} />
     </>
   );
 }

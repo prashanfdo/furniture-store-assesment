@@ -1,6 +1,6 @@
-import CategoryList from "components/molecules/product-list/CategoryList";
 import wrapContext from "helpers/wrapContext";
-import { CategorySidebarContextProvider, useCategorySidebarContext } from "./CategorySidebarContext";
+import CategorySidebarProvider, { useCategorySidebarContext } from "./CategorySidebarProvider";
+import { CategoryList } from "components/molecules";
 
 const CategorySidebar: React.FC = () => {
   const { categories, selectedCategoryId } = useCategorySidebarContext();
@@ -11,4 +11,4 @@ const CategorySidebar: React.FC = () => {
   );
 };
 
-export default wrapContext(CategorySidebarContextProvider, CategorySidebar);
+export default wrapContext(CategorySidebarProvider, CategorySidebar);

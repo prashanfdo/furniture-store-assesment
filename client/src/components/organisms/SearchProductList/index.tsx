@@ -1,7 +1,7 @@
-import ProductListHeader from "components/molecules/product-list/ProductListHeader";
-import ProductsGrid from "components/molecules/product-list/ProductsGrid";
 import wrapContext from "helpers/wrapContext";
-import { SearchProductListContextProvider, useSearchProductListContext } from "./SearchProductListContext";
+import SearchProductListProvider, { useSearchProductListContext } from "./SearchProductListProvider";
+import { ArticleListHeader } from "components/atoms";
+import { ArticleGrid } from "components/molecules";
 
 const SearchProductList: React.FC = () => {
   const { searchText, data } = useSearchProductListContext();
@@ -11,10 +11,10 @@ const SearchProductList: React.FC = () => {
   }
   return (
     <div className="grid grid-rows-[auto_1fr] py-2 px-8">
-      <ProductListHeader name={`Search Results for "${searchText}"`} articleCount={data.total} />
-      <ProductsGrid products={data.articles as any} />
+      <ArticleListHeader name={`Search Results for "${searchText}"`} articleCount={data.total} />
+      <ArticleGrid products={data.articles as any} />
     </div>
   );
 };
 
-export default wrapContext(SearchProductListContextProvider, SearchProductList);
+export default wrapContext(SearchProductListProvider, SearchProductList);
