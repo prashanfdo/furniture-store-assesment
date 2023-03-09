@@ -6,6 +6,7 @@
 .pnp.js
 
 # testing
+/src/index.out.css
 /coverage
 
 # production

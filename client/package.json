@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy_bak": "http://localhost:3001",
+  "proxy_TODO": "http://localhost:3001",
   "proxy": "https://www.home24.de",
   "engines": {
     "node": "^14.21.0"
@@ -10,6 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "pretest": "npx tailwindcss -i ./src/index.css -o ./src/index.out.css",
     "test": "react-scripts test",
     "coverage": "npm test -- --coverage --watchAll=false",
     "lint": "eslint --max-warnings 0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
@@ -42,7 +43,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "./src/{components,pages,helpers,root-contexts}/**/*.{js,jsx,ts,tsx}",
+      "./src/{components,pages,helpers,providers}/**/*.{js,jsx,ts,tsx}",
       "!./src/**/*.{types,stories,test,spec,d}.{js,jsx,ts,tsx}"
     ],
     "coverageThreshold": {
@@ -65,17 +66,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.10",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
     "@heroicons/react": "^2.0.16",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.14",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@types/styled-system": "^5.1.16",
     "clsx": "^1.2.1",
     "constate": "^3.3.2",
     "graphql": "^16.6.0",
@@ -84,19 +75,28 @@
     "react-hook-form": "^7.43.5",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
-    "styled-system": "^5.1.5",
     "swiper": "^9.1.0",
-    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.14",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-system": "^5.1.16",
+    "autoprefixer": "^10.4.13",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-jest-dom": "^4.0.3",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.2",
+    "postcss-nesting": "^11.2.1",
     "prettier": "^2.8.4",
     "run-script-os": "^1.1.6",
     "sass": "^1.58.3",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.5"
   }
 }

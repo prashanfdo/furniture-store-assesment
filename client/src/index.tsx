@@ -1,24 +1,15 @@
-import { ThemeProvider } from "@emotion/react";
-import ApolloClientProvider from "helpers/apollo-client";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
-import "./index.css";
 import router from "./pages/router";
+import Providers from "./providers";
 import reportWebVitals from "./reportWebVitals";
-import theme from "./theme";
-import { CartContextProvider } from "root-contexts/CartContext";
+
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
-    <ApolloClientProvider>
-      <CartContextProvider>
-        <ThemeProvider theme={theme}>
-          <RouterProvider router={router} />
-        </ThemeProvider>
-      </CartContextProvider>
-    </ApolloClientProvider>
+    <Providers router={router} />
   </React.StrictMode>,
 );
 
