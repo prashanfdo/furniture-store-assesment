@@ -1,5 +1,6 @@
 import constate from "constate";
 import { useQuery, gql } from "@apollo/client";
+import { ROOT_CATEGORY_ID } from "helpers/constants";
 
 type GetCategoryListResponse = {
   categories: [
@@ -41,7 +42,7 @@ export const [CategorySidebarContextProvider, useCategorySidebarContext] = const
   ({ selectedCategoryId }: CategorySidebarContextProviderProps) => {
     // TODO handle loading and error states
     const { data } = useQuery<GetCategoryListResponse>(GET_CATEGORY_LIST, {
-      variables: { id: "156126" },
+      variables: { id: ROOT_CATEGORY_ID },
     });
     return {
       selectedCategoryId,

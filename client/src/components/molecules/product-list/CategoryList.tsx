@@ -20,7 +20,7 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
 
   return (
     <>
-      <div
+      <aside
         className={clsx(
           "thin-scroll fixed bottom-0 left-0 lg:!left-0 w-full md:w-[220px] top-16 overflow-auto z-10 bg-white",
           {
@@ -53,7 +53,7 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
             ))}
           </ul>
         </div>
-      </div>
+      </aside>
     </>
   );
 }

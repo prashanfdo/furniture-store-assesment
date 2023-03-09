@@ -1,6 +1,6 @@
 import React from "react";
-import { CartContextProvider } from "./CartContext";
-import ApolloClientProvider from "helpers/apollo-client";
+import CartContextProvider from "./CartProvider";
+import ApolloClientProvider from "./ApolloClientProvider";
 import { RouterProvider, RouterProviderProps } from "react-router-dom";
 
 type ProvidersProps = {
