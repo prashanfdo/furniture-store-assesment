@@ -22,7 +22,7 @@ type CategoryListProps = {
 export default function ProductListHeader({ name, articleCount }: CategoryListProps) {
   return (
     <>
-      <H1Title>
+      <H1Title className="m-4">
         {name} <SpanArticleCount>({articleCount})</SpanArticleCount>
       </H1Title>
     </>

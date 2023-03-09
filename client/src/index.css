@@ -1,3 +1,5 @@
+@tailwind base;
+
 body {
   margin: 0; 
   font-family:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,3 +8,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* This scrollbar */
+:root {
+  --scrollbarPrimary: #eee;
+  --scrollbarSecondary: #ddd;
+}
+.thin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbarSecondary) var(--scrollbarPrimary);
+} 
+.thin-scroll::-webkit-scrollbar {
+  width: 15px;
+} 
+.thin-scroll::-webkit-scrollbar-track {
+  background: var(--scrollbarPrimary);
+  border-radius: 5px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarSecondary);
+  border-radius: 14px;
+  border: 3px solid var(--scrollbarPrimary);
+}
+
+@tailwind components;
+@tailwind utilities;

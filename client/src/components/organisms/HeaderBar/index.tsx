@@ -1,36 +1,18 @@
-import styled from "@emotion/styled";
 import SearchBar from "components/organisms/SearchBar";
-
-const Header = styled.header`
-  position: sticky;
-  top: 0;
-  background-color: lightblue;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-`;
-const ImgLogo = styled.img`
-  height: 100%;
-`;
-const LinkLogo = styled.a`
-  display: block;
-`;
-const DivSearchContainer = styled.div`
-  display: grid;
-  place-items: center;
-`;
+import { Link } from "react-router-dom";
 
 export default function HeaderBar() {
   return (
     <>
-      <Header>
-        <LinkLogo href="/">
-          <ImgLogo src="/home24_logo.svg" alt="" />
-        </LinkLogo>
-        <DivSearchContainer>
-          <SearchBar />
-        </DivSearchContainer>
-      </Header>
+      <header className="fixed w-full h-14 left-0 top-0 bg-white md:px-6 md:py-3 grid grid-cols-[6rem_1fr] !pl-14 lg:!pl-6">
+        <Link to="/" className="block">
+          <img className="h-full" src="/home24_logo.svg" alt="" />
+        </Link>
+        <div className="grid place-items-center">
+          lorem
+          {/* <SearchBar /> */}
+        </div>
+      </header>
     </>
   );
 }
