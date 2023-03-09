@@ -44,7 +44,6 @@ const [SearchProductListContextProvider, useSearchProductListContext] = constate
     const { loading, error, data } = useQuery<GetSearchProductListResponse>(GET_PRODUCT_LIST, {
       variables: { query: searchText, locale: "de_DE" },
     });
-    console.log(data?.searchData);
     return {
       searchText,
       page,

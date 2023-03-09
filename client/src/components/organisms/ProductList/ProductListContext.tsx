@@ -63,7 +63,6 @@ const [ProductListContextProvider, useProductListContext] = constate(
     const { loading, error, data } = useQuery<GetProductListResponse>(GET_PRODUCT_LIST, {
       variables: { id: categoryId },
     });
-    console.log(data?.categories);
     return {
       loading,
       error,

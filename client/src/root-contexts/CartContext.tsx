@@ -66,7 +66,6 @@ const [CartContextProvider, useCartContext] = constate(() => {
   const { loading, error, data } = useQuery<GetCartResponse>(GET_PRODUCT_LIST, {
     variables: { id: "156126" },
   });
-  console.log(data?.categories);
   return {
     loading,
     error,

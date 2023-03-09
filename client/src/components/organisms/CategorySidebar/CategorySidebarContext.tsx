@@ -42,7 +42,6 @@ export const [CategorySidebarContextProvider, useCategorySidebarContext] = const
     const { loading, error, data } = useQuery<GetCategoryListResponse>(GET_CATEGORY_LIST, {
       variables: { id: "156126" },
     });
-    console.log(111, selectedCategoryId);
     return {
       selectedCategoryId,
       categories: data?.categories?.[0].childrenCategories.list || [],
