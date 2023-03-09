@@ -1,14 +1,7 @@
-import styled from "@emotion/styled";
-import React, { useEffect } from "react";
 import SearchInput from "components/molecules/search-input/SearchInput";
-import { useSearchParams } from "react-router-dom";
 import wrapContext from "helpers/wrapContext";
+import React from "react";
 import { SearchBarContextProvider, useSearchBarContext } from "./SearchBarContext";
-
-const DivContainer = styled.div`
-  width: 500px;
-  position: relative;
-`;
 
 const SearchBar: React.FC = () => {
   const {
@@ -21,16 +14,14 @@ const SearchBar: React.FC = () => {
   } = useSearchBarContext();
 
   return (
-    <DivContainer>
-      <SearchInput
-        showSuggestions={showSuggestions}
-        initialSearchText={initialSearchText}
-        onSearchSubmit={handleSearchSubmit}
-        onSearchChange={handleSearchChange}
-        suggestions={searchSuggestions}
-        setShowSuggestions={setShowSuggestions}
-      />
-    </DivContainer>
+    <SearchInput
+      showSuggestions={showSuggestions}
+      initialSearchText={initialSearchText}
+      onSearchSubmit={handleSearchSubmit}
+      onSearchChange={handleSearchChange}
+      suggestions={searchSuggestions}
+      setShowSuggestions={setShowSuggestions}
+    />
   );
 };
 

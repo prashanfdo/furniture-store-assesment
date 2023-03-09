@@ -1,26 +1,6 @@
-import styled from "@emotion/styled";
-import React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
+import React from "react";
 import useSearchForm from "./useSearchForm";
-
-const ButtonSearch = styled.button`
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: none;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  color: #333;
-  cursor: pointer;
-`;
-const InputText = styled.input`
-  border: none;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  outline: transparent;
-`;
 
 type InputWithButtonProps = {
   register: ReturnType<typeof useSearchForm>["register"];
@@ -29,10 +9,15 @@ type InputWithButtonProps = {
 export const InputWithButton: React.FC<InputWithButtonProps> = ({ register }) => {
   return (
     <>
-      <InputText type="text" {...register("search")} autoComplete="off" />
-      <ButtonSearch>
-        <MagnifyingGlassIcon />
-      </ButtonSearch>
+      <input
+        className="w-full border-none rounded-tl-lg rounded-bl-lg bg-gray-200 px-3 py-2 outline-transparent"
+        type="text"
+        {...register("search")}
+        autoComplete="off"
+      />
+      <button className="w-10 grid place-items-center">
+        <MagnifyingGlassIcon className="w-5 h-5 text-gray-600" />
+      </button>
     </>
   );
 };

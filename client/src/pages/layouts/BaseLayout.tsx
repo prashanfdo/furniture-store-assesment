@@ -16,7 +16,7 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ page: Page }) => {
   return (
     <div className="min-h-screen bg-[#eeeeef] grid grid-rows-[auto_1fr_auto]">
       <HeaderBar />
-      <div className="lg:ml-[220px] mt-14">
+      <div className="lg:ml-[220px] mt-16">
         <CategorySidebar selectedCategoryId={categoryId} />
         <Page />
       </div>

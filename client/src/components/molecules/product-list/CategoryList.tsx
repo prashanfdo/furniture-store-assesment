@@ -22,9 +22,9 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
     <>
       <div
         className={clsx(
-          "thin-scroll fixed bottom-0 left-0 lg:!left-0 w-full md:w-[220px] top-14 overflow-auto z-10",
+          "thin-scroll fixed bottom-0 left-0 lg:!left-0 w-full md:w-[220px] top-16 overflow-auto z-10 bg-white",
           {
-            "-left-full": !showCategorySlideMenu,
+            "!-left-full": !showCategorySlideMenu,
           }
         )}>
         <button
@@ -32,7 +32,7 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
           className="fixed lg:hidden top-4 left-4 opacity-50 hover:opacity-100 cursor-pointer">
           <Bars3Icon className="w-6 h-6" />
         </button>
-        <div className="bg-white">
+        <div>
           <ul>
             <li>
               <CategorySidebarLink isActive={selectedCategoryId === ROOT_CATEGORY_ID} to={"/"}>

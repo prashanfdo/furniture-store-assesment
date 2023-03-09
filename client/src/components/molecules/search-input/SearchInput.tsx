@@ -1,15 +1,11 @@
-import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InputWithButton } from "./InputWithButton";
 import { SuggestionsList } from "./SuggestionsList";
 import useSearchForm from "./useSearchForm";
+import styled from "@emotion/styled";
 
+// TODO: Need to implement below style in tailwind
 const FormContainer = styled.form`
-  display: grid;
-  grid-template-columns: 1fr auto;
-  width: 500px;
-  position: relative;
-
   & .suggestion-list {
     display: none;
   }
@@ -38,7 +34,9 @@ const SearchInput: React.FC<SearchInputProps> = ({
 
   return (
     <>
-      <FormContainer onSubmit={searchForm.onSubmit}>
+      <FormContainer
+        className="w-full md:w-[16rem] lg:w-[32rem] relative grid grid-cols-[1fr_auto] border-gray-200 border rounded-lg"
+        onSubmit={searchForm.onSubmit}>
         <InputWithButton register={searchForm.register} />
         <SuggestionsList suggestions={suggestions} showSuggestions={showSuggestions} />
       </FormContainer>

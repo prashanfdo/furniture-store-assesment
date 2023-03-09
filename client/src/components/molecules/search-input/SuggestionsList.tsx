@@ -1,32 +1,5 @@
-import styled from "@emotion/styled";
 import React from "react";
-
-const UlSuggestions = styled.ul`
-  list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
-  position: absolute;
-  margin-top: 0.25rem;
-  background-color: #fff;
-  display: grid;
-  width: 100%;
-  min-height: 2rem;
-  top: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 0.1);
-  padding-bottom: 0.5rem;
-`;
-const LinkSuggestion = styled.a`
-  display: block;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+import { Link } from "react-router-dom";
 
 type SuggestionsListProps = {
   suggestions: {
@@ -37,6 +10,7 @@ type SuggestionsListProps = {
   showSuggestions: boolean;
 };
 
+// TODO: Link to category page
 export const SuggestionsList: React.FC<SuggestionsListProps> = ({
   suggestions,
   showSuggestions,
@@ -46,12 +20,14 @@ export const SuggestionsList: React.FC<SuggestionsListProps> = ({
   }
 
   return (
-    <UlSuggestions className="suggestion-list">
+    <ul className="suggestion-list md:absolute mt-2 bg-white w-full top-16 md:top-full rounded-sm drop-shadow-md pb-2 fixed left-0">
       {suggestions.map((suggestion) => (
         <li key={suggestion.name}>
-          <LinkSuggestion href="#">{suggestion.name}</LinkSuggestion>
+          <Link className="block decoration-transparent py-2 px-4" to="#">
+            {suggestion.name}
+          </Link>
         </li>
       ))}
-    </UlSuggestions>
+    </ul>
   );
 };
