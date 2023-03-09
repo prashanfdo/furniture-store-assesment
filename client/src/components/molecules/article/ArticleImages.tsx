@@ -8,12 +8,7 @@ const ArticleImages: React.FC<ArticleImagesProps> = ({ productImages }: ArticleI
   const image = productImages[0];
   return (
     <div>
-      <img
-        className="object-contain h-96 w-full"
-        key={image.path}
-        src={image.path}
-        alt={image.path}
-      />
+      <img className="object-contain h-96 w-full" key={image.path} src={image.path} alt={image.path} />
     </div>
   );
 };

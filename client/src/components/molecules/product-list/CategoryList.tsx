@@ -25,11 +25,13 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
           "thin-scroll fixed bottom-0 left-0 lg:!left-0 w-full md:w-[220px] top-16 overflow-auto z-10 bg-white",
           {
             "!-left-full": !showCategorySlideMenu,
-          }
-        )}>
+          },
+        )}
+      >
         <button
           onClick={handleMenuButton}
-          className="fixed lg:hidden top-4 left-4 opacity-50 hover:opacity-100 cursor-pointer">
+          className="fixed lg:hidden top-4 left-4 opacity-50 hover:opacity-100 cursor-pointer"
+        >
           <Bars3Icon className="w-6 h-6" />
         </button>
         <div>
@@ -43,7 +45,8 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
               <li key={category.id}>
                 <CategorySidebarLink
                   isActive={!!category.id ? selectedCategoryId === category.id : false}
-                  to={`/${category.id}`}>
+                  to={`/${category.id}`}
+                >
                   {category.name}
                 </CategorySidebarLink>
               </li>

@@ -27,7 +27,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ productImages }: ImageSliderP
           clickable: true,
         }}
         modules={[Pagination, Navigation]}
-        className="mySwiper">
+        className="mySwiper"
+      >
         {productImages?.map((image) => (
           <SwiperSlide>
             <img className="object-contain h-96 w-full" src={image.path} alt="" />

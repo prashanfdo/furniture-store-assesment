@@ -10,7 +10,7 @@ type GetCartResponse = {
           {
             name: string;
             urlPath: string;
-          }
+          },
         ];
       };
       categoryArticles: {
@@ -27,10 +27,10 @@ type GetCartResponse = {
             images: {
               path: string;
             }[];
-          }
+          },
         ];
       };
-    }
+    },
   ];
 };
 const GET_PRODUCT_LIST = gql`

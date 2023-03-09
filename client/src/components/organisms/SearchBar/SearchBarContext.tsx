@@ -43,8 +43,8 @@ const [SearchBarContextProvider, useSearchBarContext] = constate(() => {
     }
     setSearchText(newText);
   };
-
-  const { loading, error, data } = useQuery<GetSearchSuggestionsResponse>(GET_SEARCH_SUGGESTIONS, {
+  // TODO handle loading and error states
+  const { data } = useQuery<GetSearchSuggestionsResponse>(GET_SEARCH_SUGGESTIONS, {
     variables: { prefix: searchText },
   });
 

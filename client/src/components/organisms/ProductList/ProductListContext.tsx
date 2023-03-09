@@ -11,13 +11,13 @@ type GetProductListResponse = {
           {
             name: string;
             urlPath: string;
-          }
+          },
         ];
       };
       categoryArticles: {
         articles: Article[];
       };
-    }
+    },
   ];
 };
 const GET_PRODUCT_LIST = gql`
@@ -68,7 +68,7 @@ const [ProductListContextProvider, useProductListContext] = constate(
       error,
       data: data?.categories?.[0],
     };
-  }
+  },
 );
 
 export { ProductListContextProvider, useProductListContext };

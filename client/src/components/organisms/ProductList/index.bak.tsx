@@ -17,7 +17,8 @@ type State = {
 export var ArticleCard = ({ article }: { article: Article }) => {
   return (
     <div className={"article"}>
-      <img src={article.images[0].path} />
+      {/* TODO set alt text */}
+      <img src={article.images[0].path} alt="" />
       <div>{article.name}</div>
       <div>{formatter.format(article.prices.regular.value / 100)}</div>
       <section role="button">Add to cart</section>
@@ -70,7 +71,7 @@ class ArticleList extends React.Component {
           }
         }
       }`,
-      })
+      }),
     );
 
     xhr.onload = () => {
@@ -125,9 +126,7 @@ class ArticleList extends React.Component {
           <div className={"articles"}>{articles}</div>
         </div>
 
-        <div className={"footer"}>
-          Alle Preise sind in Euro (€) inkl. gesetzlicher Umsatzsteuer und Versandkosten.
-        </div>
+        <div className={"footer"}>Alle Preise sind in Euro (€) inkl. gesetzlicher Umsatzsteuer und Versandkosten.</div>
       </div>
     );
   }

@@ -12,7 +12,8 @@ const ArticleThumb: React.FC<ArticleThumbProps> = ({ product }: ArticleThumbProp
   return (
     <Link
       className="block border-none rounded-md bg-white overflow-hidden decoration-transparent p-4"
-      to="#product-page">
+      to="#product-page"
+    >
       <ArticleImages productImages={product.images} />
       <ArticleName product={product} />
       <ArticlePrice

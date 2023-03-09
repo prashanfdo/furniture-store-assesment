@@ -14,9 +14,10 @@ export default function CategorySidebarLink({ isActive, to, children }: Category
         "decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all",
         {
           "!text-[#7047eb]": isActive,
-        }
+        },
       )}
-      to={to}>
+      to={to}
+    >
       {children}
     </Link>
   );

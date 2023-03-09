@@ -51,7 +51,7 @@ const [SearchProductListContextProvider, useSearchProductListContext] = constate
       error,
       data: data?.searchData,
     };
-  }
+  },
 );
 
 export { SearchProductListContextProvider, useSearchProductListContext };

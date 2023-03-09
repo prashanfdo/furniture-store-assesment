@@ -1,10 +1,7 @@
 import ProductListHeader from "components/molecules/product-list/ProductListHeader";
 import ProductsGrid from "components/molecules/product-list/ProductsGrid";
 import wrapContext from "helpers/wrapContext";
-import {
-  SearchProductListContextProvider,
-  useSearchProductListContext,
-} from "./SearchProductListContext";
+import { SearchProductListContextProvider, useSearchProductListContext } from "./SearchProductListContext";
 
 const SearchProductList: React.FC = () => {
   const { searchText, data } = useSearchProductListContext();

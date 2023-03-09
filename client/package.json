@@ -11,8 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "coverage": "npm test -- --coverage --watchAll ",
+    "coverage": "npm test -- --coverage --watchAll=false",
     "lint": "eslint --max-warnings 0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint-fix": "npm run lint -- --fix",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
     "eject": "react-scripts eject",
     "prepare": "run-script-os",
@@ -54,10 +55,10 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint"
+    "*.{css,scss}": [
+      "prettier --write"
     ],
-    "*.{ts,tsx,css,scss}": [
+    "*.{ts,tsx}": [
       "eslint",
       "prettier --write"
     ]
