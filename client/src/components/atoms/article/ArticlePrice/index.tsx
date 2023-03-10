@@ -18,10 +18,18 @@ const ArticlePrice: React.FC<ArticlePriceProps> = ({ currency, price, salePrice,
 
   return (
     <div className="text-gray-600">
-      <span className="font-semibold text-red-600">{finalPrice}</span>
-      {discountPercent > 0 ? <span className="ml-4 text-sm line-through">{regularPrice}</span> : null}
+      <span data-testid="final-price" className="font-semibold text-red-600">
+        {finalPrice}
+      </span>
       {discountPercent > 0 ? (
-        <span className="px-1 py-1 ml-2 text-sm text-white bg-red-500 rounded-lg">-{discountPercent}%</span>
+        <span data-testid="regular-price" className="ml-4 text-sm line-through">
+          {regularPrice}
+        </span>
+      ) : null}
+      {discountPercent > 0 ? (
+        <span data-testid="discount-percent" className="px-1 py-1 ml-2 text-sm text-white bg-red-500 rounded-lg">
+          -{discountPercent}%
+        </span>
       ) : null}
     </div>
   );

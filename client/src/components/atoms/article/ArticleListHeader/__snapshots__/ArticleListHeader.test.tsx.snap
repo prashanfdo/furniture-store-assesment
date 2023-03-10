@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleListHeader should render 1`] = `
+<div>
+  <h1
+    class="text-3xl grid grid-cols-[auto_auto_1fr] align-middle mt-4 mb-6"
+  >
+    Test Heading
+     
+    <span
+      class="ml-1 text-gray-500"
+    >
+      (
+      123456
+      )
+    </span>
+  </h1>
+</div>
+`;

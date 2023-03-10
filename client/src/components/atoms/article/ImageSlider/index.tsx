@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Article } from "types";
 
-// TODO: implement this component
+// TODO: implement this component to use multiple images to show in ArticleThumb as a image slider
 type ImageSliderProps = {
   productImages?: Article["images"];
 };
@@ -32,7 +32,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ productImages }: ImageSliderP
       >
         {productImages?.map((image) => (
           <SwiperSlide>
-            <img className="object-contain h-96 w-full" src={image.path} alt="" />
+            <img className="object-contain w-full h-96" src={image.path} alt="" loading="lazy" />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -10,7 +10,7 @@ const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "wrapper">
   const view = render(ui, { wrapper, ...options });
 
   const style = document.createElement("style");
-  style.innerHTML = fs.readFileSync("src/test/index.css", "utf8");
+  style.innerHTML = fs.readFileSync("src/index.out.css", "utf8");
   document.head.appendChild(style);
 
   return view;

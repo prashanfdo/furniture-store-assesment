@@ -1,5 +1,4 @@
 import { ButtonHTMLAttributes } from "react";
-import { Article } from "types";
 
 type AddToCartButtonProps = Pick<
   React.DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,

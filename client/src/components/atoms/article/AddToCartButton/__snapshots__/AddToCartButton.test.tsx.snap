@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Atoms AddToCartButton should render 1`] = `
+<div>
+  <button
+    class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+  >
+    Add To Cart
+  </button>
+</div>
+`;

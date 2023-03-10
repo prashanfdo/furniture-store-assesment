@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleName should render 1`] = `
+<div>
+  <h4
+    class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+  >
+    Article One
+  </h4>
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AtricleImage should render 1`] = `
+<div>
+  <div>
+    <img
+      alt="test"
+      class="object-contain w-full h-96"
+      loading="lazy"
+      src="https://picsum.photos/id/237/200/300"
+    />
+  </div>
+</div>
+`;
