@@ -2,10 +2,10 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import React, { ForwardedRef, forwardRef } from "react";
 import { UseFormRegisterReturn } from "react-hook-form";
 
-type SearchInputProps = UseFormRegisterReturn & {};
+type SearchInputProps = UseFormRegisterReturn;
 
 const SearchInput = forwardRef((props: SearchInputProps, ref: ForwardedRef<HTMLInputElement>) => {
-  const { ...registerProps } = props;
+  const { onChange, ...registerProps } = props;
   return (
     <>
       <input

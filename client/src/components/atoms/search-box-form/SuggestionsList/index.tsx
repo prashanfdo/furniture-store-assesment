@@ -17,7 +17,10 @@ const SuggestionsList: React.FC<SuggestionsListProps> = ({ suggestions, showSugg
   }
 
   return (
-    <ul className="fixed left-0 w-full pb-2 mt-2 bg-white rounded-md suggestion-list md:absolute top-16 md:top-full drop-shadow-md md:drop-shadow-lg">
+    <ul
+      data-testid="suggestion-list"
+      className="fixed left-0 w-full pb-2 mt-2 bg-white rounded-md suggestion-list md:absolute top-16 md:top-full drop-shadow-md md:drop-shadow-lg"
+    >
       {suggestions.map((suggestion) => (
         <li key={suggestion.name}>
           <Link className="block px-4 py-2 decoration-transparent" to="#">

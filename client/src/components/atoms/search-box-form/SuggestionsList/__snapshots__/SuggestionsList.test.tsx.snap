@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SuggestionsList should render 1`] = `
+<div>
+  <ul
+    class="fixed left-0 w-full pb-2 mt-2 bg-white rounded-md suggestion-list md:absolute top-16 md:top-full drop-shadow-md md:drop-shadow-lg"
+    data-testid="suggestion-list"
+  >
+    <li>
+      <a
+        class="block px-4 py-2 decoration-transparent"
+        href="/"
+      >
+        test 1
+      </a>
+    </li>
+    <li>
+      <a
+        class="block px-4 py-2 decoration-transparent"
+        href="/"
+      >
+        test 2
+      </a>
+    </li>
+    <li>
+      <a
+        class="block px-4 py-2 decoration-transparent"
+        href="/"
+      >
+        test 3
+      </a>
+    </li>
+  </ul>
+</div>
+`;

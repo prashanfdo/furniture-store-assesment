@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import { Article } from "types";
 
 // TODO: implement this component to use multiple images to show in ArticleThumb as a image slider
+// TODO: Need to add tests
 type ImageSliderProps = {
   productImages?: Article["images"];
 };

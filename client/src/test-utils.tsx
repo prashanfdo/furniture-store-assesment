@@ -1,9 +1,12 @@
 import { render, RenderOptions } from "@testing-library/react";
-import React, { FC, ReactElement } from "react";
 import fs from "fs";
+import React, { FC, ReactElement } from "react";
+
+import { BrowserRouter } from "react-router-dom";
+import user from "@testing-library/user-event";
 
 const wrapper: FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>;
+  return <BrowserRouter>{children}</BrowserRouter>;
 };
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "wrapper">) => {
@@ -15,6 +18,7 @@ const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "wrapper">
 
   return view;
 };
-
 export * from "@testing-library/react";
+
 export { customRender as render };
+export { user };
