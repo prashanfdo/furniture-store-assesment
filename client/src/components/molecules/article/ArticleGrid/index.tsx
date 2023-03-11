@@ -6,7 +6,7 @@ type ArticleGridProps = Pick<React.ComponentProps<typeof ArticleThumb>, "onAddto
 };
 export default function ArticleGrid({ products, onAddtoCart }: ArticleGridProps) {
   return (
-    <div className="grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-4">
+    <div data-testid="product-grid" className="grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-4">
       {products.map((product) => (
         <ArticleThumb key={product.name} product={product} onAddtoCart={onAddtoCart} />
       ))}

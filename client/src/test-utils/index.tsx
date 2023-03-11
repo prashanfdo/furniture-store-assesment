@@ -20,5 +20,8 @@ const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "wrapper">
 };
 export * from "@testing-library/react";
 
+export { faker } from "@faker-js/faker";
+export * from "./generate-data";
+
 export { customRender as render };
 export { user };

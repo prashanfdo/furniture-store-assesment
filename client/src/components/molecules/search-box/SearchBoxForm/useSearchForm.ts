@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-type SearchFormFields = {
+export type SearchFormFields = {
   search: string;
 };
 
@@ -9,14 +9,8 @@ type useSearchFormProps = {
   initialSearchText: string;
   onSearchSubmit: (searchText: string) => void;
   onSearchChange: (searchText: string) => void;
-  setShowSuggestions: (show: boolean) => void;
 };
-const useSearchForm = ({
-  initialSearchText,
-  onSearchSubmit,
-  onSearchChange,
-  setShowSuggestions,
-}: useSearchFormProps) => {
+const useSearchForm = ({ initialSearchText, onSearchSubmit, onSearchChange }: useSearchFormProps) => {
   const { register, handleSubmit, watch } = useForm<SearchFormFields>({
     defaultValues: {
       search: initialSearchText,

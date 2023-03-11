@@ -11,11 +11,15 @@ type CategoryListProps = {
   selectedCategoryId?: string;
   categories?: Category[];
 };
-export default function CategoryList({ categories = [], selectedCategoryId }: CategoryListProps) {
+const CategoryList: React.FC<CategoryListProps> = ({ categories = [], selectedCategoryId }: CategoryListProps) => {
   const [showCategorySlideMenu, setShowCategorySlideMenu] = useState(false);
 
   const handleMenuButton = () => {
     setShowCategorySlideMenu(!showCategorySlideMenu);
+  };
+
+  const isSelected = (id: string) => {
+    return id === selectedCategoryId;
   };
 
   return (
@@ -36,13 +40,13 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
         </button>
         <div>
           <ul>
-            <li>
-              <CategorySidebarLink isActive={selectedCategoryId === ROOT_CATEGORY_ID} to={"/"}>
+            <li data-testid={`cat-list-item-${ROOT_CATEGORY_ID}`}>
+              <CategorySidebarLink isActive={isSelected(ROOT_CATEGORY_ID)} to={"/"}>
                 All
               </CategorySidebarLink>
             </li>
             {categories?.map((category) => (
-              <li key={category.id}>
+              <li key={category.id} data-testid={`cat-list-item-${category.id}`}>
                 <CategorySidebarLink
                   isActive={!!category.id ? selectedCategoryId === category.id : false}
                   to={`/${category.id}`}
@@ -56,4 +60,6 @@ export default function CategoryList({ categories = [], selectedCategoryId }: Ca
       </aside>
     </>
   );
-}
+};
+
+export default CategoryList;

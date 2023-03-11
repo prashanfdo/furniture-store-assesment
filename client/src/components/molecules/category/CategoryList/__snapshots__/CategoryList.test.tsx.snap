@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryList should render 1`] = `
+<div>
+  <aside
+    class="thin-scroll fixed bottom-0 left-0 lg:!left-0 w-full md:w-[220px] top-16 overflow-auto z-10 bg-white !-left-full"
+  >
+    <button
+      class="fixed opacity-50 cursor-pointer lg:hidden top-4 left-4 hover:opacity-100"
+    >
+      <svg
+        aria-hidden="true"
+        class="w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+    <div>
+      <ul>
+        <li
+          data-testid="cat-list-item-156126"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all !text-[#7047eb]"
+            href="/"
+          >
+            All
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-41703"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/41703"
+          >
+            Industrial
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-93256"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/93256"
+          >
+            Books
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-30234"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/30234"
+          >
+            Industrial
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-23609"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/23609"
+          >
+            Music
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-18627"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/18627"
+          >
+            Tools
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-66975"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/66975"
+          >
+            Tools
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-53882"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/53882"
+          >
+            Sports
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-31328"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/31328"
+          >
+            Clothing
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-20446"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/20446"
+          >
+            Grocery
+          </a>
+        </li>
+        <li
+          data-testid="cat-list-item-22958"
+        >
+          <a
+            class="decoration-0 px-6 py-2 text-sm font-semibold text-gray-800 hover:bg-slate-200 block duration-75 transition-all"
+            href="/22958"
+          >
+            Books
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>
+`;

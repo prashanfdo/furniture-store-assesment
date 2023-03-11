@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleThumb should render 1`] = `
+<div>
+  <a
+    class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+    href="/#product-page"
+  >
+    <div>
+      <img
+        alt="Modern Frozen Fish"
+        class="object-contain w-full h-96"
+        loading="lazy"
+        src="https://loremflickr.com/640/480"
+      />
+    </div>
+    <h4
+      class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+    >
+      Modern Frozen Fish
+    </h4>
+    <div
+      class="text-gray-600"
+    >
+      <span
+        class="font-semibold text-red-600"
+        data-testid="final-price"
+      >
+        785,00 €
+      </span>
+      <span
+        class="ml-4 text-sm line-through"
+        data-testid="regular-price"
+      >
+        1.000,00 €
+      </span>
+      <span
+        class="px-1 py-1 ml-2 text-sm text-white bg-red-500 rounded-lg"
+        data-testid="discount-percent"
+      >
+        -
+        22
+        %
+      </span>
+    </div>
+    <button
+      class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+    >
+      Add To Cart
+    </button>
+  </a>
+</div>
+`;

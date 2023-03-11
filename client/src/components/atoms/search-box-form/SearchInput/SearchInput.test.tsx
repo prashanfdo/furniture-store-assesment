@@ -24,11 +24,19 @@ describe("SearchInput", () => {
     const handleChange = jest.fn();
     const handleBlur = jest.fn();
     render(<SearchInput name="search" onChange={handleChange} onBlur={handleBlur} />);
-    const textbox = screen.getByRole<HTMLInputElement>("textbox");
+
+    const textbox = screen.getByRole("textbox");
+    const button = screen.getByRole("button");
+
     await user.type(textbox, "test");
+    await user.click(button);
+
     expect(textbox).toHaveValue("test");
-    // TODO: Fix this test
-    // await waitFor(() => expect(handleChange).toHaveBeenCalledTimes("test".length));
-    // await user.click(screen.getByRole("button"));
+    expect(handleChange).toHaveBeenCalledTimes("test".length);
+    expect(handleChange).toHaveBeenLastCalledWith(
+      expect.objectContaining({ target: expect.objectContaining({ value: "test" }) }),
+    );
+
+    expect(handleBlur).toHaveBeenCalled();
   });
 });

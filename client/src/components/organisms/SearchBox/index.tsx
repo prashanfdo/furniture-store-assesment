@@ -4,14 +4,8 @@ import SearchBoxProvider, { useSearchBoxContext } from "./SearchBoxProvider";
 import { SearchBoxForm } from "components/molecules";
 
 const SearchBox: React.FC = () => {
-  const {
-    handleSearchChange,
-    initialSearchText,
-    handleSearchSubmit,
-    searchSuggestions,
-    setShowSuggestions,
-    showSuggestions,
-  } = useSearchBoxContext();
+  const { handleSearchChange, initialSearchText, handleSearchSubmit, searchSuggestions, showSuggestions } =
+    useSearchBoxContext();
 
   return (
     <SearchBoxForm
@@ -20,7 +14,6 @@ const SearchBox: React.FC = () => {
       onSearchSubmit={handleSearchSubmit}
       onSearchChange={handleSearchChange}
       suggestions={searchSuggestions}
-      setShowSuggestions={setShowSuggestions}
     />
   );
 };

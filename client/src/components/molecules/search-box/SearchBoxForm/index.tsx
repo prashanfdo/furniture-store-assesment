@@ -9,14 +9,12 @@ const SearchBoxForm: React.FC<SearchBoxFormProps> = ({
   onSearchSubmit,
   onSearchChange,
   suggestions,
-  setShowSuggestions,
   showSuggestions,
 }: SearchBoxFormProps) => {
   const searchForm = useSearchForm({
     initialSearchText,
     onSearchSubmit,
     onSearchChange,
-    setShowSuggestions,
   });
 
   return (

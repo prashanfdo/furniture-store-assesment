@@ -5,7 +5,7 @@ import { UseFormRegisterReturn } from "react-hook-form";
 type SearchInputProps = UseFormRegisterReturn;
 
 const SearchInput = forwardRef((props: SearchInputProps, ref: ForwardedRef<HTMLInputElement>) => {
-  const { onChange, ...registerProps } = props;
+  const { ...registerProps } = props;
   return (
     <>
       <input
