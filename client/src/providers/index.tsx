@@ -1,12 +1,13 @@
+import { MockedProvider as MockedApolloClientProvider } from "@apollo/client/testing";
 import React from "react";
-import CartContextProvider from "./CartProvider";
+import { BrowserRouter, RouterProvider, RouterProviderProps } from "react-router-dom";
 import ApolloClientProvider from "./ApolloClientProvider";
-import { RouterProvider, RouterProviderProps } from "react-router-dom";
+import CartContextProvider from "./CartProvider";
 
 type ProvidersProps = {
   router: RouterProviderProps["router"];
 };
-export default function Providers({ router }: ProvidersProps) {
+export const Providers: React.FC<ProvidersProps> = ({ router }: ProvidersProps) => {
   return (
     <ApolloClientProvider>
       <CartContextProvider>
@@ -14,4 +15,20 @@ export default function Providers({ router }: ProvidersProps) {
       </CartContextProvider>
     </ApolloClientProvider>
   );
-}
+};
+
+type ProvidersForTestsProps = {
+  children: React.ReactNode;
+  mocks: React.ComponentProps<typeof MockedApolloClientProvider>["mocks"];
+};
+export const ProvidersForTests: React.FC<ProvidersForTestsProps> = ({ children, mocks }: ProvidersForTestsProps) => {
+  return (
+    <MockedApolloClientProvider mocks={mocks || []}>
+      <CartContextProvider>
+        <BrowserRouter>{children}</BrowserRouter>
+      </CartContextProvider>
+    </MockedApolloClientProvider>
+  );
+};
+
+export default Providers;
