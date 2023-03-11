@@ -1,13 +1,13 @@
 import { Article } from "types";
 
-export type GetSearchProductListData = {
+export type SearchProductListQueryData = {
   searchData: {
     total: number;
     articles: Article[];
   };
 };
 
-export type GetSearchProductListVars = {
+export type SearchProductListQueryVars = {
   query: string;
   locale: string;
 };

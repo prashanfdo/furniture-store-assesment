@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const GET_CATEGORY_LIST = gql`
+const CATEGORY_LIST_QUERY = gql`
   query GetCategoryList($id: String!, $locale: Locale!) {
     categories: productLists(ids: [$id], locale: $locale) {
       name
@@ -16,4 +16,4 @@ const GET_CATEGORY_LIST = gql`
   }
 `;
 
-export default GET_CATEGORY_LIST;
+export default CATEGORY_LIST_QUERY;

@@ -1,12 +1,12 @@
 import constate from "constate";
-import useGetCategoryProductList from "queries/useGetCategoryProductList";
+import useCategoryProductListQuery from "queries/useCategoryProductListQuery";
 
 type CategoryProductListProviderProps = {
   categoryId: string;
 };
 const [CategoryProductListProvider, useCategoryProductList] = constate(
   ({ categoryId }: CategoryProductListProviderProps) => {
-    const { loading, error, data } = useGetCategoryProductList(categoryId);
+    const { loading, error, data } = useCategoryProductListQuery(categoryId);
     return {
       loading,
       error,

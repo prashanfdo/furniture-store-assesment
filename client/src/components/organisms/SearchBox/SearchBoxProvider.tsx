@@ -1,5 +1,5 @@
 import constate from "constate";
-import useGetSearchSuggestions from "queries/useGetSearchSuggestions";
+import useSearchSuggestionsQuery from "queries/useSearchSuggestionsQuery";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
@@ -29,7 +29,7 @@ const [SearchBoxProvider, useSearchBoxContext] = constate(() => {
   };
 
   // TODO: handle loading and error states
-  const { data } = useGetSearchSuggestions(searchText);
+  const { data } = useSearchSuggestionsQuery(searchText);
 
   const searchSuggestions = data?.searchSuggestions || [];
 

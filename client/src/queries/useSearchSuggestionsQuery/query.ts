@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const GET_SEARCH_SUGGESTIONS = gql`
+const SEARCH_SUGGESTIONS_QUERY = gql`
   query GetSearchSuggestions($prefix: String!, $locale: Locale!) {
     searchSuggestions: autoSuggestion(prefix: $prefix, locale: $locale) {
       name
@@ -10,4 +10,4 @@ const GET_SEARCH_SUGGESTIONS = gql`
   }
 `;
 
-export default GET_SEARCH_SUGGESTIONS;
+export default SEARCH_SUGGESTIONS_QUERY;

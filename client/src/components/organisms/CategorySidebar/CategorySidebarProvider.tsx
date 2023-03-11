@@ -1,5 +1,5 @@
 import constate from "constate";
-import useGetCategoryList from "queries/useGetCategoryList";
+import useCategoryListQuery from "queries/useCategoryListQuery";
 
 type CategorySidebarProviderProps = {
   selectedCategoryId?: string;
@@ -7,7 +7,7 @@ type CategorySidebarProviderProps = {
 const [CategorySidebarProvider, useCategorySidebarContext] = constate(
   ({ selectedCategoryId }: CategorySidebarProviderProps) => {
     // TODO handle loading and error states
-    const { data } = useGetCategoryList();
+    const { data } = useCategoryListQuery();
     return {
       selectedCategoryId,
       categories: data?.categories?.[0].childrenCategories.list || [],

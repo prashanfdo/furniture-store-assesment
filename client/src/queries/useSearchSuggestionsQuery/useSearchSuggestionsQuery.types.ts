@@ -1,4 +1,4 @@
-export type GetSearchSuggestionsData = {
+export type SearchSuggestionsQueryData = {
   searchSuggestions: {
     name: string;
     results: number;
@@ -6,7 +6,7 @@ export type GetSearchSuggestionsData = {
   }[];
 };
 
-export type GetSearchSuggestionsVars = {
+export type SearchSuggestionsQueryVars = {
   prefix: string;
   locale: string;
 };

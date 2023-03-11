@@ -1,4 +1,6 @@
-export type GetCategoryListData = {
+import { Article } from "types";
+
+export type CategoryProductListQueryData = {
   categories: [
     {
       name: string;
@@ -6,17 +8,19 @@ export type GetCategoryListData = {
       childrenCategories: {
         list: [
           {
-            id: string;
             name: string;
             urlPath: string;
           },
         ];
       };
+      categoryArticles: {
+        articles: Article[];
+      };
     },
   ];
 };
 
-export type GetCategoryListVars = {
+export type CategoryProductListQueryVars = {
   id: string;
   locale: string;
 };

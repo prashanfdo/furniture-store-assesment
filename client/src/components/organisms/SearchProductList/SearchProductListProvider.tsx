@@ -1,5 +1,5 @@
 import constate from "constate";
-import useGetSearchProductList from "queries/useGetSearchProductList";
+import useSearchProductListQuery from "queries/useSearchProductListQuery";
 
 type SearchProductListContextProviderProps = {
   searchText: string;
@@ -7,7 +7,7 @@ type SearchProductListContextProviderProps = {
 };
 const [SearchProductListProvider, useSearchProductListContext] = constate(
   ({ searchText, page }: SearchProductListContextProviderProps) => {
-    const { loading, error, data } = useGetSearchProductList(searchText);
+    const { loading, error, data } = useSearchProductListQuery(searchText);
     return {
       searchText,
       page,

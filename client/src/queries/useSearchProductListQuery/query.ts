@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const GET_SEARCH_PRODUCT_LIST = gql`
+const SEARCH_PRODUCT_LIST_QUERY = gql`
   query GetSearchProductList($query: String!, $locale: Locale!) {
     searchData: search(locale: $locale, query: $query) {
       ... on SearchResultArticles {
@@ -28,4 +28,4 @@ const GET_SEARCH_PRODUCT_LIST = gql`
   }
 `;
 
-export default GET_SEARCH_PRODUCT_LIST;
+export default SEARCH_PRODUCT_LIST_QUERY;
