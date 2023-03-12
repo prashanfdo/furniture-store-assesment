@@ -5,12 +5,6 @@ const CATEGORY_PRODUCT_LIST_QUERY = gql`
     categories: productLists(ids: [$id], locale: $locale) {
       name
       articleCount
-      childrenCategories: childrenProductLists {
-        list {
-          name
-          urlPath
-        }
-      }
       categoryArticles: articlesList(first: 50) {
         articles {
           name

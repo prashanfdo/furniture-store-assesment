@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryProductList should render 1`] = `
+<div>
+  <div
+    class="grid grid-rows-[auto_1fr] py-2 px-8"
+  >
+    <h1
+      class="text-3xl grid grid-cols-[auto_auto_1fr] align-middle mt-4 mb-6"
+    >
+      Category 1
+       
+      <span
+        class="ml-1 text-gray-500"
+      >
+        (
+        1
+        )
+      </span>
+    </h1>
+    <div
+      class="grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-4"
+      data-testid="product-grid"
+    >
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Tasty Metal Sausages"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Tasty Metal Sausages
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            1.512,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Tasty Bronze Bike"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Tasty Bronze Bike
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            2.586,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Practical Plastic Chicken"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Practical Plastic Chicken
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            4.743,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Luxurious Cotton Gloves"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Luxurious Cotton Gloves
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            2.814,00 €
+          </span>
+          <span
+            class="ml-4 text-sm line-through"
+            data-testid="regular-price"
+          >
+            3.098,00 €
+          </span>
+          <span
+            class="px-1 py-1 ml-2 text-sm text-white bg-red-500 rounded-lg"
+            data-testid="discount-percent"
+          >
+            -
+            9
+            %
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Refined Wooden Chair"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Refined Wooden Chair
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            3.682,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Modern Cotton Towels"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Modern Cotton Towels
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            615,00 €
+          </span>
+          <span
+            class="ml-4 text-sm line-through"
+            data-testid="regular-price"
+          >
+            1.561,00 €
+          </span>
+          <span
+            class="px-1 py-1 ml-2 text-sm text-white bg-red-500 rounded-lg"
+            data-testid="discount-percent"
+          >
+            -
+            61
+            %
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Oriental Soft Fish"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Oriental Soft Fish
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            4.211,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Electronic Metal Hat"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Electronic Metal Hat
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            4.460,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Licensed Bronze Bacon"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Licensed Bronze Bacon
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            1.839,00 €
+          </span>
+          <span
+            class="ml-4 text-sm line-through"
+            data-testid="regular-price"
+          >
+            2.092,00 €
+          </span>
+          <span
+            class="px-1 py-1 ml-2 text-sm text-white bg-red-500 rounded-lg"
+            data-testid="discount-percent"
+          >
+            -
+            12
+            %
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+      <a
+        class="block p-4 overflow-hidden bg-white border-none rounded-md decoration-transparent"
+        href="/#product-page"
+      >
+        <div>
+          <img
+            alt="Refined Metal Computer"
+            class="object-contain w-full h-96"
+            loading="lazy"
+            src="https://loremflickr.com/640/480"
+          />
+        </div>
+        <h4
+          class="overflow-hidden text-gray-900 text-ellipsis whitespace-nowrap"
+        >
+          Refined Metal Computer
+        </h4>
+        <div
+          class="text-gray-600"
+        >
+          <span
+            class="font-semibold text-red-600"
+            data-testid="final-price"
+          >
+            2.684,00 €
+          </span>
+        </div>
+        <button
+          class="text-center border-solid border-gray-200 border block w-full p-2 rounded mt-2 cursor-pointer bg-white text-gray-600 hover:bg-[#7047eb] hover:text-white transition-all duration-100"
+        >
+          Add To Cart
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CategoryProductList should render error state 1`] = `
+<div>
+  <div
+    class="grid grid-rows-[auto_1fr] py-2 px-8"
+  >
+    <div>
+      Loading...
+    </div>
+    <div>
+      Error Occurred. Please try refreshing the page.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CategoryProductList should render loading state 1`] = `
+<div>
+  <div
+    class="grid grid-rows-[auto_1fr] py-2 px-8"
+  >
+    <div>
+      Loading...
+    </div>
+  </div>
+</div>
+`;

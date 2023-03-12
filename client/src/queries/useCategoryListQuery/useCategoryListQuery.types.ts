@@ -4,13 +4,11 @@ export type CategoryListQueryData = {
       name: string;
       articleCount: number;
       childrenCategories: {
-        list: [
-          {
-            id: string;
-            name: string;
-            urlPath: string;
-          },
-        ];
+        list: {
+          id: string;
+          name: string;
+          urlPath: string;
+        }[];
       };
     },
   ];

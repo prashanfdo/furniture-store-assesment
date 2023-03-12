@@ -1,16 +1,21 @@
-import constate from "constate";
 import useSearchSuggestionsQuery from "queries/useSearchSuggestionsQuery";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 // TODO: add comments
-const [SearchBoxProvider, useSearchBoxContext] = constate(() => {
+const useSearchBox = () => {
   const navigate = useNavigate();
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
 
   const [searchParams] = useSearchParams();
+  console.log(11111999);
   const initialSearchText = searchParams.get("q") || "";
   const [searchText, setSearchText] = useState<string>("");
+
+  console.log("searchText", searchParams);
+  useEffect(() => {
+    console.log("searchText 111", searchParams);
+  }, [searchParams]);
 
   const handleSearchSubmit = (searchText: string) => {
     setShowSuggestions(false);
@@ -29,11 +34,13 @@ const [SearchBoxProvider, useSearchBoxContext] = constate(() => {
   };
 
   // TODO: handle loading and error states
-  const { data } = useSearchSuggestionsQuery(searchText);
+  const { data, loading, error } = useSearchSuggestionsQuery(searchText);
 
   const searchSuggestions = data?.searchSuggestions || [];
 
   return {
+    loading,
+    error,
     initialSearchText,
     handleSearchChange,
     handleSearchSubmit,
@@ -41,7 +48,6 @@ const [SearchBoxProvider, useSearchBoxContext] = constate(() => {
     showSuggestions,
     setShowSuggestions,
   };
-});
+};
 
-export { useSearchBoxContext };
-export default SearchBoxProvider;
+export default useSearchBox;

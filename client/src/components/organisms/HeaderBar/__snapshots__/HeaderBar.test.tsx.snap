@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderBar should render 1`] = `
+<div>
+  <header
+    class="fixed w-full h-16 left-0 top-0 bg-white md:px-6 md:py-3 grid grid-cols-[6rem_1fr] !pl-14 lg:!pl-6"
+  >
+    <a
+      class="grid w-24 place-items-center"
+      href="/"
+    >
+      <img
+        alt="site logo"
+        class="h-full"
+        src="/home24_logo.svg"
+      />
+    </a>
+    <div
+      class="grid mx-4 place-items-center lg:mr-24"
+    >
+      <div
+        data-testid="search-box"
+      />
+    </div>
+  </header>
+</div>
+`;

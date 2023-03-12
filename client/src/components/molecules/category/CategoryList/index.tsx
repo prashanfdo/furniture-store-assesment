@@ -1,17 +1,24 @@
-import { ROOT_CATEGORY_ID } from "helpers/constants";
-import { ChildCategory } from "types";
 import { Bars3Icon } from "@heroicons/react/20/solid";
-import { useState } from "react";
 import clsx from "clsx";
 import { CategorySidebarLink } from "components/atoms";
+import { ROOT_CATEGORY_ID } from "helpers/constants";
+import { useState } from "react";
+import { ChildCategory } from "types";
 
 type Category = ChildCategory["list"][0];
 
 type CategoryListProps = {
   selectedCategoryId?: string;
   categories?: Category[];
+  loading: boolean;
+  error: boolean;
 };
-const CategoryList: React.FC<CategoryListProps> = ({ categories = [], selectedCategoryId }: CategoryListProps) => {
+const CategoryList: React.FC<CategoryListProps> = ({
+  categories = [],
+  selectedCategoryId,
+  loading,
+  error,
+}: CategoryListProps) => {
   const [showCategorySlideMenu, setShowCategorySlideMenu] = useState(false);
 
   const handleMenuButton = () => {
@@ -45,16 +52,19 @@ const CategoryList: React.FC<CategoryListProps> = ({ categories = [], selectedCa
                 All
               </CategorySidebarLink>
             </li>
-            {categories?.map((category) => (
-              <li key={category.id} data-testid={`cat-list-item-${category.id}`}>
-                <CategorySidebarLink
-                  isActive={!!category.id ? selectedCategoryId === category.id : false}
-                  to={`/${category.id}`}
-                >
-                  {category.name}
-                </CategorySidebarLink>
-              </li>
-            ))}
+            {loading && <li>loading...</li>}
+            {error && <li>Error Occurred</li>}
+            {!loading &&
+              categories?.map((category) => (
+                <li key={category.id} data-testid={`cat-list-item-${category.id}`}>
+                  <CategorySidebarLink
+                    isActive={!!category.id ? selectedCategoryId === category.id : false}
+                    to={`/${category.id}`}
+                  >
+                    {category.name}
+                  </CategorySidebarLink>
+                </li>
+              ))}
           </ul>
         </div>
       </aside>

@@ -1,9 +1,11 @@
 import user from "@testing-library/user-event";
-import { createSearchSuggestionList, render, screen, waitFor } from "test-utils";
+import { createSearchSuggestionList, render, screen } from "test-utils";
 import SearchBoxForm from "./index";
-import { ROOT_CATEGORY_ID } from "helpers/constants";
 
 const dataSuggestions = createSearchSuggestionList(10);
+jest.mock("usehooks-ts", () => ({
+  useDebounce: (text: string) => text,
+}));
 
 describe("SearchBoxForm", () => {
   beforeEach(() => {
@@ -73,7 +75,6 @@ describe("SearchBoxForm", () => {
     expect(input).toHaveValue("");
 
     await user.type(input, searchText);
-
     expect(input).toHaveValue(searchText);
     expect(handleSearchChange).toHaveBeenCalled();
     expect(handleSearchChange).toHaveBeenLastCalledWith(searchText);

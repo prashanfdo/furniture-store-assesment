@@ -1,11 +1,10 @@
-import wrapContext from "helpers/wrapContext";
-import React from "react";
-import SearchBoxProvider, { useSearchBoxContext } from "./SearchBoxProvider";
 import { SearchBoxForm } from "components/molecules";
+import React from "react";
+import useSearchBox from "./useSearchBox";
 
 const SearchBox: React.FC = () => {
   const { handleSearchChange, initialSearchText, handleSearchSubmit, searchSuggestions, showSuggestions } =
-    useSearchBoxContext();
+    useSearchBox();
 
   return (
     <SearchBoxForm
@@ -18,4 +17,4 @@ const SearchBox: React.FC = () => {
   );
 };
 
-export default wrapContext(SearchBoxProvider, SearchBox);
+export default SearchBox;

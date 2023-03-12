@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox should render 1`] = `
+<div>
+  <div
+    data-testid="search-box-form"
+  />
+</div>
+`;

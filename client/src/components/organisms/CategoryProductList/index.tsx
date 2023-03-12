@@ -1,20 +1,25 @@
 import { ArticleListHeader } from "components/atoms";
 import { ArticleGrid } from "components/molecules";
-import wrapContext from "helpers/wrapContext";
-import CategoryProductListProvider, { useCategoryProductList } from "./CategoryProductListProvider";
+import useCategoryProductList from "./useCategoryProductList";
 
-const ProductList: React.FC = () => {
-  const { data } = useCategoryProductList();
+type CategoryProductListProps = {
+  categoryId: string;
+};
+const CategoryProductList: React.FC<CategoryProductListProps> = ({ categoryId }: CategoryProductListProps) => {
+  const { data, loading, error } = useCategoryProductList(categoryId);
 
-  if (data === undefined) {
-    return null;
-  }
   return (
     <div className="grid grid-rows-[auto_1fr] py-2 px-8">
-      <ArticleListHeader name={data.name} articleCount={data.articleCount} />
-      <ArticleGrid products={data.categoryArticles.articles} />
+      {(loading || !data) && <div>Loading...</div>}
+      {error && <div>Error Occurred. Please try refreshing the page.</div>}
+      {data && (
+        <>
+          <ArticleListHeader name={data.name} articleCount={data.articleCount} />
+          <ArticleGrid products={data.categoryArticles.articles} />
+        </>
+      )}
     </div>
   );
 };
 
-export default wrapContext(CategoryProductListProvider, ProductList);
+export default CategoryProductList;

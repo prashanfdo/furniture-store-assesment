@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useSearchBox should render 1`] = `null`;
+
+exports[`useSearchBox should return initial search text from current url 1`] = `null`;

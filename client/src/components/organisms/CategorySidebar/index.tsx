@@ -1,14 +1,18 @@
-import wrapContext from "helpers/wrapContext";
-import CategorySidebarProvider, { useCategorySidebarContext } from "./CategorySidebarProvider";
 import { CategoryList } from "components/molecules";
+import useCategorySidebar from "./useCategorySidebar";
 
-const CategorySidebar: React.FC = () => {
-  const { categories, selectedCategoryId } = useCategorySidebarContext();
+type CategorySidebarProviderProps = {
+  selectedCategoryId?: string;
+};
+const CategorySidebar: React.FC<CategorySidebarProviderProps> = ({
+  selectedCategoryId,
+}: CategorySidebarProviderProps) => {
+  const { categories, loading, error } = useCategorySidebar();
   return (
     <>
-      <CategoryList categories={categories} selectedCategoryId={selectedCategoryId} />
+      <CategoryList loading={loading} error={!!error} categories={categories} selectedCategoryId={selectedCategoryId} />
     </>
   );
 };
 
-export default wrapContext(CategorySidebarProvider, CategorySidebar);
+export default CategorySidebar;

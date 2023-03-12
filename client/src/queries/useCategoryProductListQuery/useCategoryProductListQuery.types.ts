@@ -5,14 +5,6 @@ export type CategoryProductListQueryData = {
     {
       name: string;
       articleCount: number;
-      childrenCategories: {
-        list: [
-          {
-            name: string;
-            urlPath: string;
-          },
-        ];
-      };
       categoryArticles: {
         articles: Article[];
       };
