@@ -60,3 +60,9 @@
                 -Price
                 -AddToCart
         -Pagination
+
+
+
+
+Notes: 
+Colors based on the Logo

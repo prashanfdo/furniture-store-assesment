@@ -9,7 +9,7 @@ const useSearchBox = () => {
 
   const [searchParams] = useSearchParams();
   const initialSearchText = searchParams.get("q") || "";
-  const [searchText, setSearchText] = useState<string>("");
+  const [searchText, setSearchText] = useState<string>(initialSearchText);
 
   const handleSearchSubmit = (searchText: string) => {
     setShowSuggestions(false);

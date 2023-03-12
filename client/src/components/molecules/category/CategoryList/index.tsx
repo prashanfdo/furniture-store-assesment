@@ -4,6 +4,7 @@ import { CategorySidebarLink } from "components/atoms";
 import { ROOT_CATEGORY_ID } from "helpers/constants";
 import { useState } from "react";
 import { ChildCategory } from "types";
+import Loading from "./Loading";
 
 type Category = ChildCategory["list"][0];
 
@@ -52,7 +53,11 @@ const CategoryList: React.FC<CategoryListProps> = ({
                 All
               </CategorySidebarLink>
             </li>
-            {loading && <li>loading...</li>}
+            {loading && (
+              <li className="px-6 py-2">
+                <Loading />
+              </li>
+            )}
             {error && <li>Error Occurred</li>}
             {!loading &&
               categories?.map((category) => (

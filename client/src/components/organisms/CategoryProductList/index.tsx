@@ -10,12 +10,11 @@ const CategoryProductList: React.FC<CategoryProductListProps> = ({ categoryId }:
 
   return (
     <div className="grid grid-rows-[auto_1fr] py-2 px-8">
-      {(loading || !data) && <div>Loading...</div>}
       {error && <div>Error Occurred. Please try refreshing the page.</div>}
-      {data && (
+      {(data || loading) && (
         <>
-          <ArticleListHeader name={data.name} articleCount={data.articleCount} />
-          <ArticleGrid products={data.categoryArticles.articles} />
+          <ArticleListHeader name={data?.name} articleCount={data?.articleCount} loading={loading} />
+          <ArticleGrid products={data?.categoryArticles.articles || []} loading={loading} />
         </>
       )}
     </div>

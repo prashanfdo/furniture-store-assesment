@@ -17,10 +17,10 @@ exports[`BaseLayout should render 1`] = `
       <div
         data-testid="page"
       />
+      <div
+        data-testid="footer"
+      />
     </div>
-    <div
-      data-testid="footer"
-    />
   </div>
 </div>
 `;

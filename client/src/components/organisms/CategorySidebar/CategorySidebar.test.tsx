@@ -37,7 +37,7 @@ describe("CategorySidebar", () => {
     );
     const { container } = render(<CategorySidebar />);
     expect(container).toMatchSnapshot();
-    expect(screen.getByText("loading...")).toBeInTheDocument();
+    expect(screen.getByTestId("loading")).toBeInTheDocument();
   });
 
   it("should render error state", () => {

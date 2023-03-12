@@ -3,6 +3,7 @@
 exports[`Footer should render 1`] = `
 <div>
   <footer
+    class="px-8 pt-16 pb-12 text-center"
     data-testid="footer"
   >
     Alle Preise sind in Euro (€) inkl. gesetzlicher Umsatzsteuer und Versandkosten

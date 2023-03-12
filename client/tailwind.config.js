@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {  
     extend: {
-      colors: {
+      colors: { 
         coral: {
           '50':  '#fcfbf8',
           '100': '#faefe1',

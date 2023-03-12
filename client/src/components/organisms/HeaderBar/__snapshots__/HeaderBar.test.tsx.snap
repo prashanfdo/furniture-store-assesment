@@ -12,7 +12,7 @@ exports[`HeaderBar should render 1`] = `
       <img
         alt="site logo"
         class="h-full"
-        src="/home24_logo.svg"
+        src="/site_logo.svg"
       />
     </a>
     <div

@@ -11,7 +11,7 @@ describe("ArticleGrid", () => {
 
   it("should render", () => {
     const handleAddToCart = jest.fn();
-    const { container } = render(<ArticleGrid products={dataProducts} onAddtoCart={handleAddToCart} />);
+    const { container } = render(<ArticleGrid products={dataProducts} onAddtoCart={handleAddToCart} loading={false} />);
     expect(container).toMatchSnapshot();
     const productGrid = screen.getByTestId("product-grid");
     expect(productGrid).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe("ArticleGrid", () => {
 
   it("should invoke onAddtoCart callback", async () => {
     const handleAddToCart = jest.fn();
-    render(<ArticleGrid products={dataProducts} onAddtoCart={handleAddToCart} />);
+    render(<ArticleGrid products={dataProducts} onAddtoCart={handleAddToCart} loading={false} />);
     await user.click(screen.getAllByRole("button")[0]);
     expect(handleAddToCart).toHaveBeenCalledTimes(1);
   });

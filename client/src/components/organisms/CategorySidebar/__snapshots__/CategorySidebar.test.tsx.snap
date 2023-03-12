@@ -217,8 +217,112 @@ exports[`CategorySidebar should render loading state 1`] = `
             All
           </a>
         </li>
-        <li>
-          loading...
+        <li
+          class="px-6 py-2"
+        >
+          <svg
+            aria-labelledby="htgv6ff-aria"
+            data-testid="loading"
+            height="150"
+            role="img"
+            width="100%"
+          >
+            <title
+              id="htgv6ff-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#htgv6ff-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#htgv6ff-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="htgv6ff-diff"
+              >
+                <rect
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  width="180"
+                  x="0"
+                  y="0"
+                />
+                <rect
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  width="180"
+                  x="0"
+                  y="30"
+                />
+                <rect
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  width="180"
+                  x="0"
+                  y="60"
+                />
+                <rect
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  width="180"
+                  x="0"
+                  y="90"
+                />
+              </clippath>
+              <lineargradient
+                id="htgv6ff-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#f3f3f3"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#ecebeb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#f3f3f3"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
         </li>
       </ul>
     </div>

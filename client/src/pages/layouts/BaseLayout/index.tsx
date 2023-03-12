@@ -18,8 +18,8 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ page: Page }) => {
       <div className="lg:ml-[220px] mt-16">
         <CategorySidebar selectedCategoryId={categoryId} />
         <Page />
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

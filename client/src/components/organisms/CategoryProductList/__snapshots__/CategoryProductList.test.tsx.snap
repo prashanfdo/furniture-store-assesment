@@ -405,9 +405,6 @@ exports[`CategoryProductList should render error state 1`] = `
     class="grid grid-rows-[auto_1fr] py-2 px-8"
   >
     <div>
-      Loading...
-    </div>
-    <div>
       Error Occurred. Please try refreshing the page.
     </div>
   </div>
@@ -419,8 +416,330 @@ exports[`CategoryProductList should render loading state 1`] = `
   <div
     class="grid grid-rows-[auto_1fr] py-2 px-8"
   >
-    <div>
-      Loading...
+    <h1
+      class="text-3xl grid grid-cols-[auto_auto_1fr] align-middle mt-4 mb-6"
+    >
+      <svg
+        aria-labelledby="v70jvj-aria"
+        data-testid="article-list-header-loading"
+        height="45"
+        role="img"
+        width="100%"
+      >
+        <title
+          id="v70jvj-aria"
+        >
+          Loading...
+        </title>
+        <rect
+          clip-path="url(#v70jvj-diff)"
+          height="100%"
+          role="presentation"
+          style="fill: url(#v70jvj-animated-diff);"
+          width="100%"
+          x="0"
+          y="0"
+        />
+        <defs>
+          <clippath
+            id="v70jvj-diff"
+          >
+            <rect
+              height="40"
+              rx="5"
+              ry="5"
+              width="100%"
+              x="0"
+              y="0"
+            />
+          </clippath>
+          <lineargradient
+            id="v70jvj-animated-diff"
+          >
+            <stop
+              offset="0%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-2; -2; 1"
+              />
+            </stop>
+            <stop
+              offset="50%"
+              stop-color="#f0f0f0"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-1; -1; 2"
+              />
+            </stop>
+            <stop
+              offset="100%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="0; 0; 3"
+              />
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
+    </h1>
+    <div
+      class="grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-4"
+      data-testid="product-grid"
+    >
+      <svg
+        aria-labelledby="8b2unvj-aria"
+        data-testid="loading"
+        height="300"
+        role="img"
+        width="100%"
+      >
+        <title
+          id="8b2unvj-aria"
+        >
+          Loading...
+        </title>
+        <rect
+          clip-path="url(#8b2unvj-diff)"
+          height="100%"
+          role="presentation"
+          style="fill: url(#8b2unvj-animated-diff);"
+          width="100%"
+          x="0"
+          y="0"
+        />
+        <defs>
+          <clippath
+            id="8b2unvj-diff"
+          >
+            <rect
+              height="300"
+              rx="5"
+              ry="5"
+              width="100%"
+              x="0"
+              y="0"
+            />
+          </clippath>
+          <lineargradient
+            id="8b2unvj-animated-diff"
+          >
+            <stop
+              offset="0%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-2; -2; 1"
+              />
+            </stop>
+            <stop
+              offset="50%"
+              stop-color="#f0f0f0"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-1; -1; 2"
+              />
+            </stop>
+            <stop
+              offset="100%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="0; 0; 3"
+              />
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
+      <svg
+        aria-labelledby="6zjovkb-aria"
+        data-testid="loading"
+        height="300"
+        role="img"
+        width="100%"
+      >
+        <title
+          id="6zjovkb-aria"
+        >
+          Loading...
+        </title>
+        <rect
+          clip-path="url(#6zjovkb-diff)"
+          height="100%"
+          role="presentation"
+          style="fill: url(#6zjovkb-animated-diff);"
+          width="100%"
+          x="0"
+          y="0"
+        />
+        <defs>
+          <clippath
+            id="6zjovkb-diff"
+          >
+            <rect
+              height="300"
+              rx="5"
+              ry="5"
+              width="100%"
+              x="0"
+              y="0"
+            />
+          </clippath>
+          <lineargradient
+            id="6zjovkb-animated-diff"
+          >
+            <stop
+              offset="0%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-2; -2; 1"
+              />
+            </stop>
+            <stop
+              offset="50%"
+              stop-color="#f0f0f0"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-1; -1; 2"
+              />
+            </stop>
+            <stop
+              offset="100%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="0; 0; 3"
+              />
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
+      <svg
+        aria-labelledby="26tzh7-aria"
+        data-testid="loading"
+        height="300"
+        role="img"
+        width="100%"
+      >
+        <title
+          id="26tzh7-aria"
+        >
+          Loading...
+        </title>
+        <rect
+          clip-path="url(#26tzh7-diff)"
+          height="100%"
+          role="presentation"
+          style="fill: url(#26tzh7-animated-diff);"
+          width="100%"
+          x="0"
+          y="0"
+        />
+        <defs>
+          <clippath
+            id="26tzh7-diff"
+          >
+            <rect
+              height="300"
+              rx="5"
+              ry="5"
+              width="100%"
+              x="0"
+              y="0"
+            />
+          </clippath>
+          <lineargradient
+            id="26tzh7-animated-diff"
+          >
+            <stop
+              offset="0%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-2; -2; 1"
+              />
+            </stop>
+            <stop
+              offset="50%"
+              stop-color="#f0f0f0"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-1; -1; 2"
+              />
+            </stop>
+            <stop
+              offset="100%"
+              stop-color="#fff"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="0; 0; 3"
+              />
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
     </div>
   </div>
 </div>
