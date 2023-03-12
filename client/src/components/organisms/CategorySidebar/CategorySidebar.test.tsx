@@ -4,6 +4,7 @@ import { CategoryListQueryData, CategoryListQueryVars } from "queries/useCategor
 import { createCategoryList, createGqlResult, render, screen } from "test-utils";
 import CategorySidebar from "./index";
 
+jest.mock("react-content-loader", () => () => <div data-testid="loading">Loading</div>);
 jest.mock("queries/useCategoryListQuery");
 const mockUseCategoryListQuery = useCategoryListQuery as jest.MockedFunction<typeof useCategoryListQuery>;
 

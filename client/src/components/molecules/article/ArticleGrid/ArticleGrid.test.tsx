@@ -2,6 +2,8 @@ import user from "@testing-library/user-event";
 import { createArticleList, render, screen } from "test-utils";
 import ArticleGrid from "./index";
 
+jest.mock("react-content-loader", () => () => <div data-testid="loading">Loading</div>);
+
 const dataProducts: React.ComponentProps<typeof ArticleGrid>["products"] = createArticleList(10);
 
 describe("ArticleGrid", () => {

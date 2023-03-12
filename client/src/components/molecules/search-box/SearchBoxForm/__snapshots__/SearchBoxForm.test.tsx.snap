@@ -7,16 +7,16 @@ exports[`SearchBoxForm should render 1`] = `
   >
     <input
       autocomplete="off"
-      class="w-full px-3 py-2 bg-gray-200 border-none rounded-tl-lg rounded-bl-lg outline-transparent"
+      class="w-full px-3 py-2 bg-gray-200 border-transparent border-none rounded-tl-lg rounded-bl-lg outline-transparent"
       name="search"
       type="text"
     />
     <button
-      class="grid w-10 place-items-center"
+      class="grid w-10 text-white transition-colors border-transparent rounded-tr-lg rounded-br-lg place-items-center bg-coral-500 hover:bg-coral-300"
     >
       <svg
         aria-hidden="true"
-        class="w-5 h-5 text-gray-600"
+        class="w-5 h-5 font-bold"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

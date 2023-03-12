@@ -8,6 +8,7 @@ import {
 import { createArticleList, createGqlResult, render } from "test-utils";
 import CategoryProductList from "./index";
 
+jest.mock("react-content-loader", () => () => <div data-testid="loading">Loading</div>);
 jest.mock("queries/useCategoryProductListQuery");
 const mockUseCategoryProductListQuery = useCategoryProductListQuery as jest.MockedFunction<
   typeof useCategoryProductListQuery

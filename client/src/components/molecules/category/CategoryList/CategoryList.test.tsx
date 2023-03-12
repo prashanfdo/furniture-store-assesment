@@ -4,6 +4,7 @@ import { createCategoryList } from "test-utils/generate-data";
 import CategoryList from "./index";
 import { ROOT_CATEGORY_ID } from "helpers/constants";
 
+jest.mock("react-content-loader", () => () => <div data-testid="loading">Loading</div>);
 const dataCategories: React.ComponentProps<typeof CategoryList>["categories"] = createCategoryList(10);
 
 describe("CategoryList", () => {
