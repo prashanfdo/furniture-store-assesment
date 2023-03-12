@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryPage should render 1`] = `
+<div>
+  <div
+    data-category-id="test"
+    data-testid="category-product-list"
+  />
+</div>
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseLayout should render 1`] = `
+<div>
+  <div
+    class="min-h-screen bg-[#eeeeef] grid grid-rows-[auto_1fr_auto]"
+  >
+    <div
+      data-testid="header-bar"
+    />
+    <div
+      class="lg:ml-[220px] mt-16"
+    >
+      <div
+        data-testid="category-sidebar"
+      />
+      <div
+        data-testid="page"
+      />
+    </div>
+    <div
+      data-testid="footer"
+    />
+  </div>
+</div>
+`;

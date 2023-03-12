@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchProductList should render 1`] = `
+<div>
+  <div
+    class="grid grid-rows-[auto_1fr] py-2 px-8"
+  >
+    <div
+      data-testid="article-list-header"
+    />
+    <div
+      data-testid="article-grid"
+    />
+  </div>
+</div>
+`;

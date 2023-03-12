@@ -1,10 +1,13 @@
-import wrapContext from "helpers/wrapContext";
-import SearchProductListProvider, { useSearchProductListContext } from "./SearchProductListProvider";
 import { ArticleListHeader } from "components/atoms";
 import { ArticleGrid } from "components/molecules";
+import useSearchProductList from "./useSearchProductList";
 
-const SearchProductList: React.FC = () => {
-  const { searchText, data } = useSearchProductListContext();
+type SearchProductListProps = {
+  searchText: string;
+  page: number;
+};
+const SearchProductList: React.FC<SearchProductListProps> = ({ searchText, page }: SearchProductListProps) => {
+  const { data } = useSearchProductList(searchText, page);
 
   if (data === undefined) {
     return null;
@@ -17,4 +20,4 @@ const SearchProductList: React.FC = () => {
   );
 };
 
-export default wrapContext(SearchProductListProvider, SearchProductList);
+export default SearchProductList;

@@ -1,5 +1,5 @@
 import useSearchSuggestionsQuery from "queries/useSearchSuggestionsQuery";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 // TODO: add comments
@@ -8,14 +8,8 @@ const useSearchBox = () => {
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
 
   const [searchParams] = useSearchParams();
-  console.log(11111999);
   const initialSearchText = searchParams.get("q") || "";
   const [searchText, setSearchText] = useState<string>("");
-
-  console.log("searchText", searchParams);
-  useEffect(() => {
-    console.log("searchText 111", searchParams);
-  }, [searchParams]);
 
   const handleSearchSubmit = (searchText: string) => {
     setShowSuggestions(false);
