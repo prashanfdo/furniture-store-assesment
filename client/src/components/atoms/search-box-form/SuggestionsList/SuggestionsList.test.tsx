@@ -1,5 +1,4 @@
-import user from "@testing-library/user-event";
-import { render, screen } from "test-utils";
+import { render, screen, user } from "test-utils";
 import SuggestionsList from "./index";
 
 const dataSuggestions: React.ComponentProps<typeof SuggestionsList>["suggestions"] = [

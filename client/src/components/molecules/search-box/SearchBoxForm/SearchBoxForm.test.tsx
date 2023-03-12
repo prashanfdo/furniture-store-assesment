@@ -1,5 +1,4 @@
-import user from "@testing-library/user-event";
-import { createSearchSuggestionList, render, screen } from "test-utils";
+import { createSearchSuggestionList, render, screen, user } from "test-utils";
 import SearchBoxForm from "./index";
 
 const dataSuggestions = createSearchSuggestionList(10);

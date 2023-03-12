@@ -1,5 +1,4 @@
-import user from "@testing-library/user-event";
-import { render, screen, within } from "test-utils";
+import { render, screen, user, within } from "test-utils";
 import { createCategoryList } from "test-utils/generate-data";
 import CategoryList from "./index";
 import { ROOT_CATEGORY_ID } from "helpers/constants";

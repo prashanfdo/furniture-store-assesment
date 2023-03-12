@@ -1,5 +1,4 @@
-import user from "@testing-library/user-event";
-import { render, screen } from "test-utils";
+import { render, screen, user } from "test-utils";
 import SearchInput from "./index";
 
 describe("SearchInput", () => {

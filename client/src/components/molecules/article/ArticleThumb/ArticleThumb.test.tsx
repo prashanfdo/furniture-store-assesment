@@ -1,5 +1,4 @@
-import user from "@testing-library/user-event";
-import { createArticle, render, screen } from "test-utils";
+import { createArticle, render, screen, user } from "test-utils";
 import ArticleThumb from "./index";
 
 const dataProduct: React.ComponentProps<typeof ArticleThumb>["product"] = createArticle(true);

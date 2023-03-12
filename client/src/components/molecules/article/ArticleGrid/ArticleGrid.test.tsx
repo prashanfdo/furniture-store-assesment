@@ -1,5 +1,4 @@
-import user from "@testing-library/user-event";
-import { createArticleList, render, screen } from "test-utils";
+import { createArticleList, render, screen, user } from "test-utils";
 import ArticleGrid from "./index";
 
 jest.mock("react-content-loader", () => () => <div data-testid="loading">Loading</div>);

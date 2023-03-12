@@ -2,8 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy_TODO": "http://localhost:3001",
-  "proxy": "https://www.home24.de",
+  "proxy": "http://localhost:3001",
   "engines": {
     "node": "^14.21.0"
   },
