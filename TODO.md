@@ -5,3 +5,4 @@
  - Add/Improve SEO related tags
  - Fix Light house recommendations
  - Fix To-dos mentioned in the code
+ - Fix keyboard accessibility issues

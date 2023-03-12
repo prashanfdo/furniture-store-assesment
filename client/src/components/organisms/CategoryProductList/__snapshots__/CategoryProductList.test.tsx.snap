@@ -3,7 +3,7 @@
 exports[`CategoryProductList should render 1`] = `
 <div>
   <div
-    class="grid grid-rows-[auto_1fr] py-2 px-8"
+    class="max-w-[100rem] mx-auto grid grid-rows-[auto_1fr] py-2 px-8"
   >
     <h1
       class="text-3xl grid grid-cols-[auto_auto_1fr] align-middle mt-4 mb-6"
@@ -402,7 +402,7 @@ exports[`CategoryProductList should render 1`] = `
 exports[`CategoryProductList should render error state 1`] = `
 <div>
   <div
-    class="grid grid-rows-[auto_1fr] py-2 px-8"
+    class="max-w-[100rem] mx-auto grid grid-rows-[auto_1fr] py-2 px-8"
   >
     <div>
       Error Occurred. Please try refreshing the page.
@@ -414,7 +414,7 @@ exports[`CategoryProductList should render error state 1`] = `
 exports[`CategoryProductList should render loading state 1`] = `
 <div>
   <div
-    class="grid grid-rows-[auto_1fr] py-2 px-8"
+    class="max-w-[100rem] mx-auto grid grid-rows-[auto_1fr] py-2 px-8"
   >
     <h1
       class="text-3xl grid grid-cols-[auto_auto_1fr] align-middle mt-4 mb-6"

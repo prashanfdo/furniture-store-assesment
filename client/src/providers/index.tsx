@@ -3,6 +3,9 @@ import React from "react";
 import { RouterProvider, RouterProviderProps, MemoryRouter } from "react-router-dom";
 import ApolloClientProvider from "./ApolloClientProvider";
 import CartContextProvider from "./CartProvider";
+import { HelmetProvider } from "react-helmet-async";
+
+const helmetContext = {};
 
 type ProvidersProps = {
   router: RouterProviderProps["router"];
@@ -11,7 +14,9 @@ export const Providers: React.FC<ProvidersProps> = ({ router }: ProvidersProps) 
   return (
     <ApolloClientProvider>
       <CartContextProvider>
-        <RouterProvider router={router} />
+        <HelmetProvider context={helmetContext}>
+          <RouterProvider router={router} />
+        </HelmetProvider>
       </CartContextProvider>
     </ApolloClientProvider>
   );
@@ -30,7 +35,9 @@ export const ProvidersForTests: React.FC<ProvidersForTestsProps> = ({
   return (
     <MockedApolloClientProvider mocks={mocks || []}>
       <CartContextProvider>
-        <MemoryRouter initialEntries={initialRoute ? [initialRoute] : undefined}>{children}</MemoryRouter>
+        <HelmetProvider context={helmetContext}>
+          <MemoryRouter initialEntries={initialRoute ? [initialRoute] : undefined}>{children}</MemoryRouter>
+        </HelmetProvider>
       </CartContextProvider>
     </MockedApolloClientProvider>
   );

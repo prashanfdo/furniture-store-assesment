@@ -15,6 +15,7 @@ const SearchProductList: React.FC<SearchProductListProps> = ({ searchText, page 
   return (
     <div className="grid grid-rows-[auto_1fr] py-2 px-8">
       {error && <div>Error Occurred. Please try refreshing the page.</div>}
+      {/* Add SEO Tags */}
       <ArticleListHeader name={`Search Results for "${searchText}"`} articleCount={data.total} loading={loading} />
       <ArticleGrid products={data.articles as any} loading={loading} />
     </div>

@@ -1,4 +1,3 @@
-// TODO: clean all below like imports, must import from 'test-utils
 import useSearchProductListQuery from "queries/useSearchProductListQuery";
 import {
   SearchProductListQueryData,
