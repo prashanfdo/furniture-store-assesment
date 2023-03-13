@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -69,5 +72,13 @@ module.exports = {
       }
     },
   },
-  plugins: []
+  plugins: [
+    plugin(function({ addVariant, e }) {
+      addVariant('group-focus-within', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.group:focus-within .${e(`group-focus-within${separator}${className}`)}`
+        })
+      })
+    })
+  ]
 }

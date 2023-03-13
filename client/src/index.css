@@ -30,13 +30,5 @@ body {
   border: 3px solid var(--scrollbarPrimary);
 }
 
-// TODO: Need to implement below style in tailwind
-.search-input-form .suggestion-list {
-  display: none;
-}
-.search-input-form:focus-within .suggestion-list {
-  display: block;
-}
-
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

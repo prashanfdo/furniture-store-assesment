@@ -35,10 +35,11 @@ describe("SearchBoxForm", () => {
         suggestions={dataSuggestions}
       />,
     );
-    expect(screen.queryAllByRole("link")).toHaveLength(dataSuggestions.length);
-    expect(screen.queryAllByRole("link").map((el) => el.textContent)).toEqual(
-      expect.arrayContaining(dataSuggestions.map((el) => el.name)),
-    );
+    const links = screen.queryAllByRole("link", {
+      hidden: true,
+    });
+    expect(links).toHaveLength(dataSuggestions.length);
+    expect(links.map((el) => el.textContent)).toEqual(expect.arrayContaining(dataSuggestions.map((el) => el.name)));
   });
 
   it("should not render suggestion list when showSuggestions=false", () => {

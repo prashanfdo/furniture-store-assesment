@@ -20,7 +20,7 @@ const SearchBoxForm: React.FC<SearchBoxFormProps> = ({
   return (
     <>
       <form
-        className="search-input-form w-full md:w-[16rem] lg:w-[32rem] relative grid grid-cols-[1fr_auto] border-gray-200 border rounded-lg"
+        className="search-input-form w-full md:w-[16rem] lg:w-[32rem] relative grid grid-cols-[1fr_auto] border-gray-200 border rounded-lg group"
         onSubmit={searchForm.onSubmit}
       >
         <SearchInput {...searchForm.register("search")} />

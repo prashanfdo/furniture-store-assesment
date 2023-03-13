@@ -31,7 +31,7 @@ describe("SuggestionsList", () => {
 
   it("should render links", () => {
     render(<SuggestionsList suggestions={dataSuggestions} showSuggestions={true} />);
-    expect(screen.getAllByRole("link")).toHaveLength(dataSuggestions.length);
+    expect(screen.getAllByRole("link", { hidden: true })).toHaveLength(dataSuggestions.length);
   });
 
   it("should not visible with no suggestions", () => {

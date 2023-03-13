@@ -19,7 +19,7 @@ const SuggestionsList: React.FC<SuggestionsListProps> = ({ suggestions, showSugg
   return (
     <ul
       data-testid="suggestion-list"
-      className="fixed left-0 w-full pb-2 mt-2 bg-white rounded-md suggestion-list md:absolute top-16 md:top-full drop-shadow-md md:drop-shadow-lg"
+      className="fixed left-0 hidden w-full pb-2 mt-2 bg-white rounded-md suggestion-list md:absolute top-16 md:top-full drop-shadow-md md:drop-shadow-lg group-focus-within:block"
     >
       {suggestions.map((suggestion) => (
         <li key={suggestion.name}>

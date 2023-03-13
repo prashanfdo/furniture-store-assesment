@@ -3,7 +3,7 @@
 exports[`SearchBoxForm should render 1`] = `
 <div>
   <form
-    class="search-input-form w-full md:w-[16rem] lg:w-[32rem] relative grid grid-cols-[1fr_auto] border-gray-200 border rounded-lg"
+    class="search-input-form w-full md:w-[16rem] lg:w-[32rem] relative grid grid-cols-[1fr_auto] border-gray-200 border rounded-lg group"
   >
     <input
       autocomplete="off"
